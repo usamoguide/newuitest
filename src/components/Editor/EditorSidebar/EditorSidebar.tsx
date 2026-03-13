@@ -1,5 +1,6 @@
 import { useAtom, useAtomValue, useSetAtom } from 'jotai';
-import React, { useCallback, useEffect, useState } from 'react';
+import React, { useCallback, useEffect, useRef, useState } from 'react';
+import toast from 'react-hot-toast';
 import {
   activeFileAtom,
   branchAtom,
@@ -28,6 +29,7 @@ function GithubActions() {
     | 'Setting Branch...'
     | 'Detecting Branches...'
   >('Create/Set Branch');
+  const lastEnsuredBranchRef = useRef<string | null>(null);
   const [installed, setInstalled] = useState<boolean | undefined>(undefined);
   useEffect(() => {
     if (!octokit || !githubInfo) return;
@@ -76,7 +78,8 @@ function GithubActions() {
           }
         }
       }
-      if (branches.find(branch => branch.name === branchName)) {
+      const branchExists = branches.find(branch => branch.name === branchName);
+      if (branchExists) {
         setBranchState('Setting Branch...');
       } else setBranchState('Creating Branch...');
       if (!octokit) {
@@ -95,24 +98,35 @@ function GithubActions() {
           }
         )
       ).data[0].object.sha;
-      octokit
-        .request('POST /repos/{owner}/{repo}/git/refs', {
-          owner: githubInfo.login,
-          repo: 'usamo-guide',
-          ref: `refs/heads/${branchName}`,
-          sha: masterSha,
-          headers: {
-            'X-GitHub-Api-Version': '2022-11-28',
-          },
-        })
-        .catch(() => {})
-        .finally(() => {
-          setBranch(branchName);
-          setBranchState('Create/Set Branch');
-        });
+      if (!branchExists) {
+        try {
+          await octokit.request('POST /repos/{owner}/{repo}/git/refs', {
+            owner: githubInfo.login,
+            repo: 'usamo-guide',
+            ref: `refs/heads/${branchName}`,
+            sha: masterSha,
+            headers: {
+              'X-GitHub-Api-Version': '2022-11-28',
+            },
+          });
+          toast.success('Branch created');
+        } catch (error) {
+          toast.error('Failed to create branch');
+        }
+      } else {
+        toast('Branch already exists');
+      }
+      setBranch(branchName);
+      setBranchState('Create/Set Branch');
     },
     [githubInfo, octokit, fork, setBranch]
   );
+  useEffect(() => {
+    if (!branch || !octokit || !githubInfo || !fork) return;
+    if (lastEnsuredBranchRef.current === branch) return;
+    lastEnsuredBranchRef.current = branch;
+    createBranch(branch);
+  }, [branch, createBranch, fork, githubInfo, octokit]);
   return (
     <>
       {!installed ? (
@@ -181,7 +195,7 @@ function GithubActions() {
               {branch && githubInfo && (
                 <a
                   className="btn mt-4"
-                  href={`https://github.com/${githubInfo.login}/usamo-guide/pull/new/${branch}`}
+                  href={`https://github.com/usamoguide/usamo-guide/compare/main...${githubInfo.login}:${branch}?expand=1`}
                   target="_blank"
                   rel="noreferrer"
                 >

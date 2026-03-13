@@ -2,6 +2,7 @@ import { Dialog, DialogBackdrop, DialogPanel } from '@headlessui/react';
 import React from 'react';
 import { AlgoliaEditorFile } from '../../models/algoliaEditorFile';
 import AddFileModal from './AddFileModal';
+import AddPageModal from './AddPageModal';
 import EditorFileModalInterface from './EditorFileModalInterface';
 
 export interface EditorFileModalProps {
@@ -16,6 +17,7 @@ export const EditorFileModal: React.FC<EditorFileModalProps> = ({
   onSelect,
 }) => {
   const [addFileOpen, setAddFileOpen] = React.useState(false);
+  const [addPageOpen, setAddPageOpen] = React.useState(false);
   return (
     <>
       <Dialog open={isOpen} onClose={onClose} className="relative z-10">
@@ -38,6 +40,7 @@ export const EditorFileModal: React.FC<EditorFileModalProps> = ({
               <EditorFileModalInterface
                 onSelect={onSelect}
                 openAddFile={() => setAddFileOpen(true)}
+                openAddPage={() => setAddPageOpen(true)}
               />
             </DialogPanel>
           </div>
@@ -46,6 +49,10 @@ export const EditorFileModal: React.FC<EditorFileModalProps> = ({
       <AddFileModal
         isOpen={addFileOpen}
         onClose={() => setAddFileOpen(false)}
+      />
+      <AddPageModal
+        isOpen={addPageOpen}
+        onClose={() => setAddPageOpen(false)}
       />
     </>
   );

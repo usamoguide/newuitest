@@ -2,6 +2,8 @@ import { XIcon } from '@heroicons/react/solid';
 import classNames from 'classnames';
 import React, { useState } from 'react';
 import { AlgoliaEditorFile } from '../../../models/algoliaEditorFile';
+import AddFileModal from '../AddFileModal';
+import AddPageModal from '../AddPageModal';
 import { EditorFileModal } from '../EditorFileModal';
 
 export const FileListSidebar: React.FC<{
@@ -22,6 +24,8 @@ export const FileListSidebar: React.FC<{
   onNewFile,
 }) => {
   const [isFileModalOpen, setIsFileModalOpen] = useState(false);
+  const [isAddPageOpen, setIsAddPageOpen] = useState(false);
+  const [isAddProblemOpen, setIsAddProblemOpen] = useState(false);
   const handleFileSelect = (file: AlgoliaEditorFile) => {
     setIsFileModalOpen(false);
     onNewFile(file);
@@ -73,6 +77,24 @@ export const FileListSidebar: React.FC<{
           'text-gray-500 hover:bg-gray-200 hover:text-gray-600 active:bg-gray-200 dark:hover:bg-gray-800 dark:hover:text-gray-400 dark:active:bg-gray-800',
           'w-full px-4 py-2 text-sm font-medium transition focus:outline-hidden'
         )}
+        onClick={() => setIsAddPageOpen(true)}
+      >
+        New Page
+      </button>
+      <button
+        className={classNames(
+          'text-gray-500 hover:bg-gray-200 hover:text-gray-600 active:bg-gray-200 dark:hover:bg-gray-800 dark:hover:text-gray-400 dark:active:bg-gray-800',
+          'w-full px-4 py-2 text-sm font-medium transition focus:outline-hidden'
+        )}
+        onClick={() => setIsAddProblemOpen(true)}
+      >
+        New Problem
+      </button>
+      <button
+        className={classNames(
+          'text-gray-500 hover:bg-gray-200 hover:text-gray-600 active:bg-gray-200 dark:hover:bg-gray-800 dark:hover:text-gray-400 dark:active:bg-gray-800',
+          'w-full px-4 py-2 text-sm font-medium transition focus:outline-hidden'
+        )}
         onClick={() => setIsFileModalOpen(true)}
       >
         Open File
@@ -81,6 +103,14 @@ export const FileListSidebar: React.FC<{
         isOpen={isFileModalOpen}
         onClose={() => setIsFileModalOpen(false)}
         onSelect={handleFileSelect}
+      />
+      <AddPageModal
+        isOpen={isAddPageOpen}
+        onClose={() => setIsAddPageOpen(false)}
+      />
+      <AddFileModal
+        isOpen={isAddProblemOpen}
+        onClose={() => setIsAddProblemOpen(false)}
       />
     </div>
   );

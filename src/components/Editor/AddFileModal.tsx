@@ -71,16 +71,24 @@ export default function AddFileModal(props) {
               disabled={fileStatus === 'Creating File...'}
               onClick={async () => {
                 try {
+                  if (!fileURL.trim()) {
+                    alert('Please enter a problem URL.');
+                    return;
+                  }
                   setFileStatus('Creating File...');
-                  const info = (
-                    await fetch('/api/fetch-metadata', {
+                  const response = await fetch('/api/fetch-metadata', {
                       method: 'POST',
                       headers: {
                         'Content-Type': 'application/json',
                       },
                       body: JSON.stringify({ url: fileURL }),
-                    }).then(res => res.json())
-                  ).data;
+                    });
+                  const payload = await response.json();
+                  if (!response.ok || !payload?.data?.uniqueId) {
+                    const message = payload?.error || 'Unable to fetch metadata.';
+                    throw new Error(message);
+                  }
+                  const info = payload.data;
                   props.onClose();
                   createSol({
                     id: info.uniqueId,

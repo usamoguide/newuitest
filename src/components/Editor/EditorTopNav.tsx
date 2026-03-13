@@ -5,6 +5,8 @@ import { activeFileAtom, saveFileAtom } from '../../atoms/editor';
 import { useDarkMode } from '../../context/DarkModeContext';
 import { useSetThemeSetting } from '../../context/UserDataContext/properties/simpleProperties';
 import LogoSquare from '../LogoSquare';
+import AddFileModal from './AddFileModal';
+import AddPageModal from './AddPageModal';
 import { fetchFileContent } from './editorUtils';
 
 export const EditorTopNav = (): JSX.Element => {
@@ -12,6 +14,8 @@ export const EditorTopNav = (): JSX.Element => {
   const saveFile = useSetAtom(saveFileAtom);
   const isDarkMode = useDarkMode();
   const setTheme = useSetThemeSetting();
+  const [addFileOpen, setAddFileOpen] = React.useState(false);
+  const [addPageOpen, setAddPageOpen] = React.useState(false);
 
   const handleReloadContent = async () => {
     if (!activeFile) return;
@@ -57,6 +61,18 @@ export const EditorTopNav = (): JSX.Element => {
             View File on GitHub &rarr;
           </a>
         )}
+        <button
+          className="inline-flex items-center space-x-2 rounded-md px-3 py-2 text-sm font-medium text-gray-500 transition hover:bg-gray-100 hover:text-gray-700 focus:outline-hidden dark:text-gray-400 dark:hover:bg-gray-800 dark:hover:text-gray-300"
+          onClick={() => setAddPageOpen(true)}
+        >
+          New Page
+        </button>
+        <button
+          className="inline-flex items-center space-x-2 rounded-md px-3 py-2 text-sm font-medium text-gray-500 transition hover:bg-gray-100 hover:text-gray-700 focus:outline-hidden dark:text-gray-400 dark:hover:bg-gray-800 dark:hover:text-gray-300"
+          onClick={() => setAddFileOpen(true)}
+        >
+          New Problem
+        </button>
       </div>
       <div className="flex items-center">
         <a
@@ -108,6 +124,14 @@ export const EditorTopNav = (): JSX.Element => {
           )}
         </button>
       </div>
+      <AddFileModal
+        isOpen={addFileOpen}
+        onClose={() => setAddFileOpen(false)}
+      />
+      <AddPageModal
+        isOpen={addPageOpen}
+        onClose={() => setAddPageOpen(false)}
+      />
     </div>
   );
 };

@@ -46,10 +46,76 @@ const EditorTabBar: React.FC<EditorTabBarProps> = ({
   const saveFile = useSetAtom(saveFileAtom);
   const tab = useAtomValue(tabAtom);
   const [dialogOpen, setDialogOpen] = useState(false);
+  const ensureBranchExists = useCallback(async () => {
+    if (!octokit || !githubInfo || !branch) return;
+    try {
+      await octokit.request('GET /repos/{owner}/{repo}/branches/{branch}', {
+        owner: githubInfo.login,
+        repo: 'usamo-guide',
+        branch,
+        headers: {
+          'X-GitHub-Api-Version': '2022-11-28',
+        },
+      });
+      return;
+    } catch (error) {
+      const status = (error as { status?: number })?.status;
+      if (status && status !== 404) throw error;
+    }
+
+    let baseSha: string | undefined;
+    try {
+      baseSha = (
+        await octokit.request(
+          'GET /repos/{owner}/{repo}/git/matching-refs/{ref}',
+          {
+            owner: githubInfo.login,
+            repo: 'usamo-guide',
+            ref: 'heads/main',
+            headers: {
+              'X-GitHub-Api-Version': '2022-11-28',
+            },
+          }
+        )
+      ).data[0]?.object?.sha;
+    } catch {
+      baseSha = undefined;
+    }
+    if (!baseSha) {
+      baseSha = (
+        await octokit.request(
+          'GET /repos/{owner}/{repo}/git/matching-refs/{ref}',
+          {
+            owner: 'usamoguide',
+            repo: 'usamo-guide',
+            ref: 'heads/main',
+            headers: {
+              'X-GitHub-Api-Version': '2022-11-28',
+            },
+          }
+        )
+      ).data[0]?.object?.sha;
+    }
+
+    if (!baseSha) {
+      throw new Error('Unable to resolve base branch for new branch');
+    }
+
+    await octokit.request('POST /repos/{owner}/{repo}/git/refs', {
+      owner: githubInfo.login,
+      repo: 'usamo-guide',
+      ref: `refs/heads/${branch}`,
+      sha: baseSha,
+      headers: {
+        'X-GitHub-Api-Version': '2022-11-28',
+      },
+    });
+  }, [octokit, githubInfo, branch]);
   const updateFile = useCallback(
     async file => {
       if (!octokit || !githubInfo || !branch) return;
       setCommitState('Committing...');
+      await ensureBranchExists();
       let fileSha = undefined;
       try {
         fileSha = (
@@ -85,7 +151,7 @@ const EditorTabBar: React.FC<EditorTabBarProps> = ({
       window.open(response.data.commit.html_url, '_blank');
       setCommitState('Commit Code');
     },
-    [octokit, githubInfo, branch, filePath]
+    [octokit, githubInfo, branch, filePath, ensureBranchExists]
   );
   const pullCode = useCallback(async () => {
     if (!octokit || !githubInfo || !branch) return;
