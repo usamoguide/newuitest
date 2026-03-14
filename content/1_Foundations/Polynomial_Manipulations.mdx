@@ -1,0 +1,78 @@
+---
+id: polynomial-manipulations
+title: Polynomial Manipulations
+author: USAMO Guide Team
+description: Shifting and inverting roots to simplify expressions.
+prerequisites: []
+---
+
+## Overview
+
+Changing variables transforms roots and can make symmetric sums easier. Common
+moves include shifting and taking reciprocals.
+
+## Key Ideas
+
+- If $r$ is a root of $P(x)$, then $r+k$ is a root of $P(x-k)$.
+- If $r$ is a root of $P(x)$, then $1/r$ is a root of the reversed-coefficient
+  polynomial when the constant term is nonzero.
+- Use these to compute sums over transformed roots.
+
+## Core Skills
+
+### Shift the Variable
+
+Replace $x$ with $x-h$ to shift roots by $h$. This is the standard way to move
+between a polynomial and its translated version.
+
+### Reverse Coefficients for Reciprocals
+
+If $P(x)=a_nx^n+\cdots+a_0$ and $a_0\ne 0$, then $x^nP(1/x)$ has roots $1/r$.
+
+### Use Vieta After Transformations
+
+Once the new polynomial is found, apply Vieta to compute sums and products.
+
+## Worked Example
+
+If $x^2-5x+6=0$ has roots $r,s$, find the polynomial with roots $r+1, s+1$.
+
+Replace $x$ by $x-1$:
+$(x-1)^2 - 5(x-1) + 6 = x^2 - 7x + 12$.
+So the new polynomial is $x^2 - 7x + 12$.
+
+## More Examples
+
+### Example 1: Shift Down
+
+If $x^2-2x-3=0$ has roots $r,s$, find the polynomial with roots $r-2, s-2$.
+
+Replace $x$ by $x+2$: $(x+2)^2-2(x+2)-3 = x^2+2x-3$.
+
+### Example 2: Reciprocal Roots
+
+If $P(x)=x^2-3x+2$, find a polynomial with roots $1/r,1/s$.
+
+Compute $x^2P(1/x)=1-3x+2x^2$, so the polynomial is $2x^2-3x+1$.
+
+### Example 3: Sum of Shifted Roots
+
+If $r+s=4$, find $(r+1)+(s+1)$.
+
+The sum increases by $2$, so it is $6$.
+
+## Strategy Checklist
+
+- Decide whether you need a shift or a reciprocal.
+- Apply the substitution carefully and simplify.
+- Use Vieta to extract root sums/products.
+
+## Common Pitfalls
+
+- Shifting in the wrong direction.
+- Forgetting that reciprocal roots require a nonzero constant term.
+- Dropping factors when forming $x^nP(1/x)$.
+
+## Practice Problems
+
+<Problems problems="practice" />

@@ -1,0 +1,78 @@
+---
+id: higher-power-factorizations
+title: Higher-Power Factorizations
+author: USAMO Guide Team
+description: Difference of powers and odd-power sums.
+prerequisites: []
+---
+
+## Overview
+
+When you see $x^n \pm y^n$, check if it factors. The factorization patterns
+help simplify large expressions quickly.
+
+## Key Ideas
+
+- $x^n - y^n = (x-y)(x^{n-1} + x^{n-2}y + \cdots + y^{n-1})$.
+- If $n$ is odd, $x^n + y^n$ factors as $(x+y)(x^{n-1} - x^{n-2}y + \cdots + y^{n-1})$.
+- Even-power sums usually do not factor over the reals.
+
+## Core Skills
+
+### Check Parity of $n$
+
+The sum $x^n+y^n$ only factors over the reals when $n$ is odd. The difference
+$x^n-y^n$ always factors.
+
+### Factor Out a Common Power
+
+If $x^n \pm y^n$ shares a common factor, pull it out first to simplify the
+remaining expression.
+
+### Use Repeated Factoring
+
+After applying a power factorization, check if the remaining factor is still
+factorable (for example, a difference of squares).
+
+## Worked Example
+
+Factor $a^5 + b^5$.
+
+Since $5$ is odd,
+$a^5 + b^5 = (a+b)(a^4 - a^3b + a^2b^2 - ab^3 + b^4)$.
+
+## More Examples
+
+### Example 1: Difference of Powers
+
+Factor $x^6 - y^6$.
+
+First, $x^6-y^6=(x^3-y^3)(x^3+y^3)$, then each cubic factors further.
+
+### Example 2: Sum with Odd Power
+
+Factor $x^3 + 8y^3$.
+
+$x^3 + (2y)^3 = (x+2y)(x^2-2xy+4y^2)$.
+
+### Example 3: Factor Out a Power
+
+Factor $x^8 - x^4$.
+
+$x^4(x^4-1)=x^4(x^2-1)(x^2+1)$.
+
+## Strategy Checklist
+
+- Check whether the exponent is odd or even.
+- Factor out a common power first.
+- Look for repeated factoring opportunities.
+
+## Common Pitfalls
+
+- Applying the sum formula when $n$ is even.
+- Forgetting the alternating signs in the odd-power sum factor.
+- Stopping after one factorization when more is possible.
+
+## Practice Problems
+
+<Problems problems="practice" />

@@ -1,0 +1,85 @@
+---
+id: trig-product-sum
+title: Product-to-Sum and Sum-to-Product
+author: USAMO Guide Team
+description: Convert products into sums and vice versa.
+prerequisites: [trig-angle-addition]
+---
+
+## Overview
+
+These formulas are useful when products appear in AIME-style problems or when
+you want to collapse a sum into a single trig function.
+
+## Core Skills
+
+### Decide Direction
+
+If you see a product, use product-to-sum; if you see a sum of two sines or
+cosines, use sum-to-product.
+
+### Keep the $1/2$ Factor
+
+All product-to-sum formulas include a factor of $1/2$. Include it early to
+avoid mistakes.
+
+### Use Special Angles
+
+Pick angles like $15^\circ$ and $75^\circ$ so the sum or difference is a
+standard angle.
+
+## Product-to-Sum
+
+$$\sin\alpha\cos\beta = \tfrac12[\sin(\alpha+\beta)+\sin(\alpha-\beta)]$$
+
+$$\cos\alpha\cos\beta = \tfrac12[\cos(\alpha+\beta)+\cos(\alpha-\beta)]$$
+
+$$\sin\alpha\sin\beta = \tfrac12[\cos(\alpha-\beta)-\cos(\alpha+\beta)]$$
+
+## Sum-to-Product
+
+$$\sin A + \sin B = 2\sin\tfrac{A+B}{2}\cos\tfrac{A-B}{2}$$
+
+$$\cos A + \cos B = 2\cos\tfrac{A+B}{2}\cos\tfrac{A-B}{2}$$
+
+## Worked Example
+
+Simplify $\sin 75^\circ + \sin 15^\circ$.
+
+$$2\sin 45^\circ\cos 30^\circ = \frac{\sqrt{6}}{2}.$$ 
+
+## More Examples
+
+### Example 1: Product to Sum
+
+Simplify $\sin 20^\circ\cos 40^\circ$.
+
+$\tfrac12[\sin 60^\circ+\sin(-20^\circ)] = \tfrac12(\sqrt{3}/2-\sin 20^\circ)$.
+
+### Example 2: Sum to Product
+
+Simplify $\cos 80^\circ + \cos 40^\circ$.
+
+$2\cos 60^\circ\cos 20^\circ = \cos 20^\circ$.
+
+### Example 3: Difference of Sines
+
+Simplify $\sin 50^\circ-\sin 10^\circ$.
+
+$2\cos 30^\circ\sin 20^\circ = \sqrt{3}\sin 20^\circ$.
+
+## Strategy Checklist
+
+- Identify whether a product or sum is present.
+- Apply the correct formula and keep the $1/2$.
+- Simplify with special angles where possible.
+
+## Common Pitfalls
+
+- Dropping the $1/2$ factor in product-to-sum.
+- Mixing up the $A+B$ and $A-B$ halves.
+- Switching sine and cosine formulas.
+
+## Practice Problems
+
+<Problems problems="practice" />

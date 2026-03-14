@@ -1,0 +1,77 @@
+---
+id: telescoping
+title: Telescoping Sums and Products
+author: USAMO Guide Team
+description: Use cancellation after algebraic rewriting.
+prerequisites: []
+---
+
+## Overview
+
+Telescoping replaces many terms with a few boundary terms. The key is rewriting
+expressions to expose cancellation.
+
+## Key Ideas
+
+- Use partial fractions to split rational terms.
+- For products, factor each term and cancel across consecutive indices.
+- Always write a few terms to see the pattern.
+
+## Core Skills
+
+### Rewrite the General Term
+
+Look for algebraic decompositions like
+$\frac{1}{k(k+1)}=\frac{1}{k}-\frac{1}{k+1}$ or
+$\frac{1}{k^2-1}=\frac{1}{2}\left(\frac{1}{k-1}-\frac{1}{k+1}\right)$.
+
+### Track Boundary Terms
+
+After cancellation, keep the first few and last few terms explicitly to avoid
+dropping a sign or a leftover term.
+
+### Products Telescope Too
+
+Write products as factorial-like ratios so consecutive terms cancel.
+
+## Worked Example
+
+Compute $\sum_{k=1}^{n} \frac{1}{k(k+1)}$.
+
+Partial fractions give $\frac{1}{k(k+1)} = \frac{1}{k} - \frac{1}{k+1}$.
+The sum becomes
+$\left(1-\frac{1}{2}\right) + \left(\frac{1}{2}-\frac{1}{3}\right) + \cdots +
+\left(\frac{1}{n} - \frac{1}{n+1}\right)$,
+so everything cancels to $1 - \frac{1}{n+1}$.
+
+## More Examples
+
+### Example 1: Shifted Denominators
+
+Compute $\sum_{k=2}^{n} \frac{1}{k^2-1}$.
+
+Use $\frac{1}{k^2-1}=\frac{1}{2}\left(\frac{1}{k-1}-\frac{1}{k+1}\right)$. The sum
+telescopes to $\frac{3}{4}-\frac{1}{2(n+1)}$.
+
+### Example 2: Product
+
+Compute $\prod_{k=2}^{n} \frac{k-1}{k}$.
+
+Everything cancels to $1/n$.
+
+## Strategy Checklist
+
+- Expand a few terms before committing to a pattern.
+- Use partial fractions for rational sums.
+- Keep boundary terms explicitly after cancellation.
+- For products, factor into consecutive ratios.
+
+## Common Pitfalls
+
+- Forgetting boundary terms after cancellation.
+- Expanding products before factoring.
+- Cancelling terms that are not consecutive in index.
+
+## Practice Problems
+
+<Problems problems="practice" />

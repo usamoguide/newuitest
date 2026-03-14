@@ -1,0 +1,80 @@
+---
+id: vieta-jumping
+title: Vieta Jumping
+author: USAMO Guide Team
+description: A descent method for symmetric Diophantine equations.
+prerequisites: []
+---
+
+## Overview
+
+Vieta jumping uses quadratic root relationships to generate new integer
+solutions. It is a classic descent technique in olympiad number theory.
+
+## Key Ideas
+
+- Treat the equation as a quadratic in one variable.
+- Use Vieta's formulas to find the second root.
+- Show the second root stays integer and smaller to force a minimal case.
+
+## Core Skills
+
+### Fix One Variable
+
+View the equation as quadratic in $a$ (or $b$), so the roots are $a$ and
+$a'=kb-a$ by Vieta.
+
+### Prove Integrality
+
+Use Vieta to show the other root is an integer. This is needed for the descent
+argument.
+
+### Compare Sizes
+
+Show $0<a'<a$ under appropriate conditions, contradicting minimality.
+
+## Worked Example
+
+Suppose positive integers $a,b$ satisfy $a^2+b^2= k(ab+1)$ for some integer $k$.
+View this as a quadratic in $a$:
+$a^2 - kba + (b^2-k)=0$.
+If $a$ is one root, the other root is $a' = kb - a$.
+You then compare $a'$ with $a$ to create a descent argument and conclude that
+$k$ must be a perfect square.
+
+## More Examples
+
+### Example 1: Symmetric Swap
+
+If $a$ is replaced by $a'=kb-a$, show the equation remains true.
+
+By Vieta, $a$ and $a'$ are roots of the same quadratic, so substituting $a'$
+still satisfies the equation.
+
+### Example 2: Minimality Step
+
+Assume $(a,b)$ is a solution with minimal $a+b$. Show that $a'<a$ leads to a
+contradiction unless the minimal case holds.
+
+This is the core descent step of the method.
+
+### Example 3: Special Case
+
+If $a^2+b^2=3ab+1$, then $a'=3b-a$. Check that $a'$ stays positive for $a>2b$.
+
+## Strategy Checklist
+
+- Choose the variable to view as quadratic.
+- Compute the other root via Vieta.
+- Prove the new root is positive and integral.
+- Use minimality to force the base case.
+
+## Common Pitfalls
+
+- Forgetting to prove the second root is positive and integral.
+- Skipping the minimality argument that drives the contradiction.
+- Treating Vieta jumping as a purely algebraic trick without descent.
+
+## Practice Problems
+
+<Problems problems="practice" />

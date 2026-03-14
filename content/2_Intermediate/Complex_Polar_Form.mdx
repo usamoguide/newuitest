@@ -1,0 +1,76 @@
+---
+id: complex-polar-form
+title: Polar Form and De Moivre
+author: USAMO Guide Team
+description: Use $re^{i\theta}$ for powers and products.
+prerequisites: [complex-basics]
+---
+
+## Overview
+
+Polar form turns multiplication into angle addition and scaling. It is the
+fastest path for high powers.
+
+## Core Skills
+
+### Convert to Polar Form
+
+Compute $r=|z|$ and $\theta=\arg z$ so $z=r(\cos\theta+i\sin\theta)$.
+
+### Multiply and Divide
+
+Multiply magnitudes and add arguments; divide magnitudes and subtract
+arguments.
+
+### Reduce Angles
+
+Always reduce angles modulo $2\pi$ to keep arguments in a standard range.
+
+## Key Ideas
+
+- $z = r(\cos\theta + i\sin\theta) = re^{i\theta}$.
+- De Moivre: $z^n = r^n(\cos n\theta + i\sin n\theta)$.
+- Multiply by adding arguments and multiplying magnitudes.
+
+## Worked Example
+
+Compute $(1+i)^{10}$.
+
+$1+i = \sqrt{2}e^{i\pi/4}$. Then
+$(1+i)^{10} = (\sqrt{2})^{10} e^{i\cdot 10\pi/4} = 2^5 e^{i\pi/2} = 32i$.
+
+## More Examples
+
+### Example 1: Power
+
+Compute $(2e^{i\pi/3})^4$.
+
+$2^4 e^{i4\pi/3} = 16\left(\cos\frac{4\pi}{3}+i\sin\frac{4\pi}{3}\right)$.
+
+### Example 2: Product
+
+If $z_1=3e^{i\pi/6}$ and $z_2=2e^{i\pi/4}$, find $z_1z_2$.
+
+$6e^{i(\pi/6+\pi/4)} = 6e^{i5\pi/12}$.
+
+### Example 3: Division
+
+Compute $\frac{4e^{i\pi/2}}{2e^{i\pi/3}}$.
+
+$2e^{i(\pi/2-\pi/3)} = 2e^{i\pi/6}$.
+
+## Strategy Checklist
+
+- Convert to polar form before powering.
+- Add or subtract arguments correctly.
+- Reduce angles to a standard range.
+
+## Common Pitfalls
+
+- Using degrees in one step and radians in another.
+- Forgetting to reduce angles modulo $2\pi$.
+- Mixing up magnitude and argument operations.
+
+## Practice Problems
+
+<Problems problems="practice" />

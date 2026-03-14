@@ -11,11 +11,31 @@ prerequisites: ["counting-fundamentals"]
 Intermediate counting problems demand structure. Learn to avoid overcounting
 by using systematic cases and complementary counting.
 
+This module adds high-yield techniques: stars and bars with constraints,
+inclusion-exclusion, derangements, and bijective counting.
+
 ## Key Ideas
 
 - Stars and bars counts nonnegative solutions to $x_1+\cdots+x_k=n$.
 - Inclusion-exclusion fixes overlaps: $|A\cup B|=|A|+|B|-|A\cap B|$.
 - Symmetry reduces cases by grouping equivalent configurations.
+- Word rearrangements with repeats use $\frac{n!}{n_1!n_2!\cdots}$.
+- Derangements: $!n = n!\sum_{k=0}^n \frac{(-1)^k}{k!}$.
+
+## Core Skills
+
+### Translate to Stars and Bars
+
+Turn constraints into $x_1+\cdots+x_k=n$ and adjust for lower bounds.
+
+### Use Inclusion-Exclusion
+
+When constraints overlap, compute total minus overlaps instead of case-by-case.
+
+### Build Bijections
+
+Match objects to a known set (binomial coefficients, lattice paths) to avoid
+overcounting.
 
 ## Worked Example
 
@@ -23,6 +43,67 @@ How many nonnegative solutions to $x+y+z=10$ with $x\ge2$?
 
 Let $x'=x-2$. Then $x'+y+z=8$ with nonnegative variables.
 The answer is $\binom{8+3-1}{3-1}=\binom{10}{2}=45$.
+
+## Word Rearrangements
+
+If a word has $n$ letters with repeats $n_1,n_2,\ldots$, the number of distinct
+arrangements is $\frac{n!}{n_1!n_2!\cdots}$. Example: BANANA has
+$\frac{6!}{3!2!1!}=60$ arrangements.
+
+## Stars and Bars with Constraints
+
+To solve $x_1+\cdots+x_k=n$ with $x_i\ge m_i$, pre-allocate the minimum:
+let $y_i=x_i-m_i$, then count nonnegative solutions to
+$y_1+\cdots+y_k=n-\sum m_i$.
+
+If you also have upper bounds, use inclusion-exclusion on the violated boxes.
+
+## Inclusion-Exclusion (PIE)
+
+For sets $A_1,\ldots,A_n$:
+
+$$|\cup A_i| = \sum |A_i| - \sum |A_i\cap A_j| + \sum |A_i\cap A_j\cap A_k| - \cdots.$$
+
+PIE is essential for derangements and multi-constraint counting.
+
+## Derangements
+
+A derangement is a permutation with no fixed points. The count is
+
+$$!n = n!\left(1-\frac{1}{1!}+\frac{1}{2!}-\frac{1}{3!}+\cdots+\frac{(-1)^n}{n!}\right).$$
+
+The probability of a derangement approaches $1/e$ as $n$ grows.
+
+## Bijections
+
+If you can map objects in set $A$ to objects in set $B$ one-to-one and onto,
+then $|A|=|B|$. Bijections often turn hard counting into binomial coefficients.
+
+## Pigeonhole Principle
+
+If $n$ objects are placed into $m$ boxes, some box has at least
+$\lceil n/m \rceil$ objects. Use it to force collisions or equal sums.
+
+## Strategy Checklist
+
+- Decide if order matters and if repetition is allowed.
+- Use stars and bars for integer solutions.
+- Apply inclusion-exclusion for overlapping cases.
+- Check for symmetry or bijections to reduce work.
+
+## Common Pitfalls
+
+- Overcounting when cases overlap.
+- Forgetting to enforce lower or upper bounds.
+- Using permutations when combinations are needed.
+
+## Example: PIE with Divisibility
+
+How many integers from 1 to 100 are divisible by 2, 3, or 5?
+
+$|A_2|=50$, $|A_3|=33$, $|A_5|=20$, $|A_2\cap A_3|=16$, $|A_2\cap A_5|=10$,
+$|A_3\cap A_5|=6$, $|A_2\cap A_3\cap A_5|=3$. So the answer is
+$50+33+20-16-10-6+3=74$.
 
 ## Practice Problems
 

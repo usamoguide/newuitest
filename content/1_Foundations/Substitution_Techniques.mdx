@@ -1,0 +1,78 @@
+---
+id: substitution-techniques
+title: Substitution Techniques
+author: USAMO Guide Team
+description: Replace repeated structure to lower degree and simplify.
+prerequisites: []
+---
+
+## Overview
+
+Substitution turns messy expressions into familiar ones. Look for repeated
+patterns like $x+1/x$, $x^2$, or symmetric sums.
+
+## Key Ideas
+
+- Let $t = x + \frac{1}{x}$ to collapse symmetric expressions.
+- Let $u = x^2$ to reduce degree in even powers.
+- Use $s=x+y$, $p=xy$ when expressions are symmetric in two variables.
+
+## Core Skills
+
+### Identify Repeated Structure
+
+Look for the same expression appearing multiple times, then replace it with a
+single variable to reduce complexity.
+
+### Translate Back Carefully
+
+After solving in the new variable, substitute back and check that all solutions
+fit the original domain.
+
+### Pair With Identities
+
+Use identities like $x^2+1/x^2 = t^2-2$ to translate higher powers.
+
+## Worked Example
+
+If $x + \frac{1}{x} = 5$, find $x^2 + \frac{1}{x^2}$.
+
+Square the equation:
+$\left(x + \frac{1}{x}\right)^2 = x^2 + 2 + \frac{1}{x^2} = 25$.
+So $x^2 + \frac{1}{x^2} = 25 - 2 = 23$.
+
+## More Examples
+
+### Example 1: Even Powers
+
+If $x^4-5x^2+4=0$, solve for $x$.
+
+Let $u=x^2$. Then $u^2-5u+4=0$ so $u=1$ or $4$. Hence $x=\pm 1,\pm 2$.
+
+### Example 2: Symmetric System
+
+If $x+y=7$ and $xy=10$, find $x^2+y^2$.
+
+$x^2+y^2=(x+y)^2-2xy=49-20=29$.
+
+### Example 3: Reciprocal Form
+
+If $x+1/x=3$, find $x^3+1/x^3$.
+
+Use $x^3+1/x^3=(x+1/x)^3-3(x+1/x)=27-9=18$.
+
+## Strategy Checklist
+
+- Identify the repeated expression.
+- Substitute consistently across all terms.
+- Translate back and verify domain restrictions.
+
+## Common Pitfalls
+
+- Forgetting domain restrictions, such as $x \ne 0$.
+- Substituting but not translating all terms consistently.
+- Keeping extraneous solutions after squaring.
+
+## Practice Problems
+
+<Problems problems="practice" />

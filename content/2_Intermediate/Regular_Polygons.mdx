@@ -1,0 +1,76 @@
+---
+id: regular-polygons
+title: Regular Polygons
+author: USAMO Guide Team
+description: Angle and area formulas for regular $n$-gons.
+prerequisites: []
+---
+
+## Overview
+
+Regular polygons are symmetric. Learn the angle and area formulas so you can
+switch between side length, apothem, and radius quickly.
+
+## Core Skills
+
+### Use Central Angles
+
+Each central angle is $360^\circ/n$, which helps relate side length to radius.
+
+### Use the Apothem
+
+Area is $\frac12 \cdot (\text{perimeter}) \cdot (\text{apothem})$.
+
+### Decompose into Triangles
+
+Split the polygon into $n$ congruent isosceles triangles from the center.
+
+## Key Ideas
+
+- Central angle: $360^\circ/n$.
+- Interior angle: $\frac{(n-2)\cdot 180^\circ}{n}$.
+- Area: $\frac{1}{2}\cdot \text{perimeter} \cdot \text{apothem}$.
+
+## Worked Example
+
+A regular hexagon has side length $6$. Find its area.
+
+A regular hexagon is 6 equilateral triangles of side $6$.
+Each has area $\frac{\sqrt{3}}{4}6^2 = 9\sqrt{3}$, so total area is
+$54\sqrt{3}$.
+
+## More Examples
+
+### Example 1: Interior Angle
+
+Find the interior angle of a regular decagon.
+
+$\frac{(10-2)\cdot 180^\circ}{10} = 144^\circ$.
+
+### Example 2: Radius from Side
+
+In a regular pentagon with side $s$, express the circumradius $R$.
+
+Use $s=2R\sin(36^\circ)$, so $R=s/(2\sin 36^\circ)$.
+
+### Example 3: Apothem
+
+A regular hexagon has side $4$. Find its apothem.
+
+Use a $30$-$60$-$90$ triangle: apothem is $2\sqrt{3}$.
+
+## Strategy Checklist
+
+- Use central angles to connect side and radius.
+- Decompose into congruent triangles for area.
+- Keep track of degrees vs radians.
+
+## Common Pitfalls
+
+- Using the interior angle formula for central angles.
+- Forgetting to convert to radians when using trig area formulas.
+- Confusing apothem with radius.
+
+## Practice Problems
+
+<Problems problems="practice" />

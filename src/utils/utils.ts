@@ -9,15 +9,18 @@ export const getModulesForDivision = (
 ) => {
   return MODULE_ORDERING[division].map(k => ({
     name: k.name,
-    items: k.items.map(k2 => {
-      if (!allModules.hasOwnProperty(k2)) {
-        throw 'Module not found: ' + k2;
-      }
-      return {
-        ...allModules[k2 as string],
-        slug: `/${division}/${allModules[k2 as string].frontmatter.id}`,
-      };
-    }),
+    items: k.items
+      .map(k2 => {
+        if (!allModules.hasOwnProperty(k2)) {
+          console.warn(`Module not found in ${division}: ${k2}`);
+          return null;
+        }
+        return {
+          ...allModules[k2 as string],
+          slug: `/${division}/${allModules[k2 as string].frontmatter.id}`,
+        };
+      })
+      .filter(Boolean),
     description: k.description,
   }));
 };

@@ -21,7 +21,43 @@ const MODULE_ORDERING: { [key in SectionID]: Chapter[] } = {
     },
     {
       name: 'Algebra Basics',
-      items: ['algebra-basics'],
+      items: [
+        'algebra-basics',
+        'exponent-rules',
+        'quadratic-identities',
+        'quadratic-formula',
+        'systems-equations',
+        'substitution-techniques',
+        'sfft-factoring',
+        'cubic-factorizations',
+        'higher-power-factorizations',
+        'sophie-germain-identity',
+      ],
+    },
+    {
+      name: 'Algebra Tools',
+      items: [
+        'vieta-formulas',
+        'newton-sums',
+        'symmetric-polynomials',
+        'polynomial-manipulations',
+        'symmetric-identity',
+        'vieta-jumping',
+      ],
+    },
+    {
+      name: 'Averages and Sequences',
+      items: [
+        'mean-median-mode-harmonic',
+        'arithmetic-sequences',
+        'geometric-sequences',
+        'sum-formulas-powers',
+        'telescoping',
+      ],
+    },
+    {
+      name: 'Intro Inequalities',
+      items: ['amgm-inequality', 'cauchy-schwarz'],
     },
     {
       name: 'Counting Fundamentals',
@@ -29,7 +65,27 @@ const MODULE_ORDERING: { [key in SectionID]: Chapter[] } = {
     },
     {
       name: 'Geometry Basics',
-      items: ['geometry-basics'],
+      items: [
+        'geometry-basics',
+        'triangle-angle-sum',
+        'triangle-area-formulas',
+        'special-triangles',
+        'right-triangles',
+        'special-right-triangles',
+        'triangle-medians-centroid',
+        'angle-bisectors',
+        'altitudes-orthocenter',
+        'similarity-basics',
+        'proportionality-thales',
+        'law-of-sines',
+        'law-of-cosines',
+        'circle-angles',
+        'special-quadrilaterals',
+      ],
+    },
+    {
+      name: 'Coordinate Geometry Basics',
+      items: ['coordinate-geometry-basics', 'line-equations'],
     },
     {
       name: 'Word Problems',
@@ -47,7 +103,7 @@ const MODULE_ORDERING: { [key in SectionID]: Chapter[] } = {
     },
     {
       name: 'Functional Equations',
-      items: ['functional-equations-intro'],
+      items: ['functional-equations-intro', 'functional-equations'],
     },
     {
       name: 'Counting & Casework',
@@ -63,11 +119,18 @@ const MODULE_ORDERING: { [key in SectionID]: Chapter[] } = {
     },
     {
       name: 'Euclidean Geometry',
-      items: ['euclidean-geometry'],
+      items: [
+        'euclidean-geometry',
+        'power-of-a-point',
+        'cyclic-quadrilaterals',
+        'tangent-lines',
+        'tangent-circles',
+        'arc-and-chord',
+      ],
     },
     {
       name: 'Coordinate Geometry',
-      items: ['coordinate-geometry'],
+      items: ['coordinate-geometry', 'shoelace-formula'],
     },
     {
       name: 'Inequalities',
@@ -76,6 +139,37 @@ const MODULE_ORDERING: { [key in SectionID]: Chapter[] } = {
     {
       name: 'Sequences & Series',
       items: ['sequences-series'],
+    },
+    {
+      name: 'Trigonometry',
+      items: [
+        'trig-unit-circle',
+        'trig-identities',
+        'trig-angle-addition',
+        'trig-product-sum',
+        'trig-equations',
+        'trig-inverse-functions',
+        'trig-triangle-laws',
+        'trig-patterns',
+      ],
+    },
+    {
+      name: 'Complex Numbers',
+      items: [
+        'complex-basics',
+        'complex-algebra',
+        'complex-conjugates',
+        'complex-plane',
+        'complex-polar-form',
+        'complex-geometry',
+        'roots-of-unity',
+        'roots-of-unity-advanced',
+        'complex-trigonometry',
+      ],
+    },
+    {
+      name: 'Geometry Extensions',
+      items: ['regular-polygons', 'three-d-geometry'],
     },
   ],
   advanced: [
@@ -97,7 +191,12 @@ const MODULE_ORDERING: { [key in SectionID]: Chapter[] } = {
     },
     {
       name: 'Advanced Geometry',
-      items: ['geometry-advanced'],
+      items: [
+        'geometry-advanced',
+        'sphere-geometry',
+        'angle-chasing',
+        'homothety-spiral-similarity',
+      ],
     },
     {
       name: 'Trig in Contests',

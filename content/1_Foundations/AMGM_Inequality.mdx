@@ -1,0 +1,80 @@
+---
+id: amgm-inequality
+title: AM-GM Inequality
+author: USAMO Guide Team
+description: A standard tool for bounding sums and products.
+prerequisites: []
+---
+
+## Overview
+
+AM-GM is the fastest way to bound expressions with fixed products or sums. It
+also provides clean equality conditions.
+
+## Key Ideas
+
+- For nonnegative $a,b$, $\frac{a+b}{2} \ge \sqrt{ab}$.
+- Equality holds when all variables are equal.
+- For $ax+\frac{b}{x}$, the minimum is $2\sqrt{ab}$ at $x=\sqrt{b/a}$.
+
+## Core Skills
+
+### Check Nonnegativity
+
+AM-GM requires nonnegative terms. If variables can be negative, reframe the
+expression (for example with squares) before applying it.
+
+### Normalize Expressions
+
+Rewrite the expression to look like a sum of terms with a fixed product. Then
+apply AM-GM directly.
+
+### Use Equality Cases
+
+The equality condition tells you where the minimum or maximum occurs. Use it
+to solve for parameters.
+
+## Worked Example
+
+Find the minimum of $x + \frac{4}{x}$ for $x>0$.
+
+By AM-GM:
+$\frac{x + \frac{4}{x}}{2} \ge \sqrt{x \cdot \frac{4}{x}} = 2$.
+So $x + \frac{4}{x} \ge 4$, with equality at $x=2$.
+
+## More Examples
+
+### Example 1: Three Variables
+
+For $a,b,c \ge 0$ with $abc=1$, find the minimum of $a+b+c$.
+
+By AM-GM, $a+b+c \ge 3\sqrt[3]{abc} = 3$.
+
+### Example 2: Fixed Sum
+
+If $x+y=10$ and $x,y \ge 0$, find the maximum of $xy$.
+
+By AM-GM, $\frac{x+y}{2} \ge \sqrt{xy}$, so $xy \le 25$ at $x=y=5$.
+
+### Example 3: Weighted Form
+
+Find the minimum of $2x + \frac{8}{x}$ for $x>0$.
+
+Rewrite as $2\left(x + \frac{4}{x}\right) \ge 8$.
+
+## Strategy Checklist
+
+- Confirm all terms are nonnegative.
+- Rewrite to expose a fixed product or fixed sum.
+- Apply AM-GM and note when equality holds.
+- Verify the equality point satisfies the domain.
+
+## Common Pitfalls
+
+- Applying AM-GM to negative terms.
+- Forgetting to check the equality condition.
+- Mixing up minimum and maximum in fixed-sum/product problems.
+
+## Practice Problems
+
+<Problems problems="practice" />

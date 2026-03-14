@@ -1,0 +1,78 @@
+---
+id: systems-equations
+title: Systems of Equations
+author: USAMO Guide Team
+description: Substitution, elimination, and symmetric tactics.
+prerequisites: []
+---
+
+## Overview
+
+Systems problems often hide symmetry. Look for sums and products that let you
+replace two variables with easier ones.
+
+## Key Ideas
+
+- Substitution works well when one equation isolates a variable.
+- Elimination cancels a variable by scaling and subtracting.
+- Symmetric systems often reduce with $s=x+y$ and $p=xy$.
+
+## Core Skills
+
+### Choose a Method
+
+If one variable is easy to isolate, substitute. If coefficients align, use
+elimination. If the system is symmetric, use $s$ and $p$.
+
+### Track Extraneous Solutions
+
+Squaring or multiplying equations can introduce extra solutions; check every
+candidate in the original system.
+
+### Use Vieta When Quadratic Appears
+
+If $x$ and $y$ satisfy $t^2-st+p=0$, then the solutions are the roots $t$.
+
+## Worked Example
+
+Solve $x+y=5$ and $xy=6$.
+
+Let $t$ be a root of $t^2 - 5t + 6 = 0$ by Vieta. Then
+$(t-2)(t-3)=0$, so $t=2$ or $t=3$. Thus $(x,y)=(2,3)$ or $(3,2)$.
+
+## More Examples
+
+### Example 1: Elimination
+
+Solve $2x+3y=13$ and $4x-3y=5$.
+
+Add: $6x=18$, so $x=3$, then $y=7/3$.
+
+### Example 2: Symmetric System
+
+Solve $x+y=4$ and $x^2+y^2=10$.
+
+$x^2+y^2=(x+y)^2-2xy$ gives $10=16-2xy$, so $xy=3$.
+Then $t^2-4t+3=0$, so $t=1$ or $3$.
+
+### Example 3: Check Extraneous
+
+Solve $x+y=3$ and $xy=4$.
+
+$t^2-3t+4=0$ has no real roots, so no real solutions.
+
+## Strategy Checklist
+
+- Pick substitution, elimination, or symmetry first.
+- Convert symmetric systems to $s$ and $p$.
+- Check all solutions in the original equations.
+
+## Common Pitfalls
+
+- Dropping solutions when squaring or substituting.
+- Forgetting to check against the original equations.
+- Mixing up which equation to substitute.
+
+## Practice Problems
+
+<Problems problems="practice" />

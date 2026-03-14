@@ -1,0 +1,69 @@
+---
+id: shoelace-formula
+title: Shoelace Formula
+author: USAMO Guide Team
+description: Fast area computation for polygons with coordinates.
+prerequisites: [coordinate-geometry-basics]
+---
+
+## Overview
+
+Shoelace is the fastest way to compute polygon area from coordinates.
+
+## Key Ideas
+
+- For vertices $(x_i,y_i)$ in order,
+  $A = \frac{1}{2}\left|\sum (x_i y_{i+1} - x_{i+1} y_i)\right|$.
+- Order matters; list vertices clockwise or counterclockwise.
+
+## Core Skills
+
+### Order the Vertices
+
+List points around the polygon (clockwise or counterclockwise). If the order
+is scrambled, reorder before applying the formula.
+
+### Use the Repeat-First Trick
+
+Rewrite the first vertex at the end to make the diagonal products easier.
+
+### Take Absolute Value Last
+
+Compute the signed area first, then take the absolute value at the end.
+
+## Worked Example
+
+Triangle has vertices $(0,0)$, $(12,0)$, $(0,5)$. Find the area.
+
+$A = \frac{1}{2}|0(0-5) + 12(5-0) + 0(0-0)| = 30$.
+
+## More Examples
+
+### Example 1: Quadrilateral
+
+Find the area of the polygon $(1,1)$, $(4,1)$, $(4,3)$, $(1,3)$.
+
+This is a rectangle of area $6$, which matches shoelace.
+
+### Example 2: Reordered Points
+
+Why does $(0,0)$, $(2,2)$, $(2,0)$ give the wrong area if used in that order?
+
+The points are not listed around the triangle. Reorder as $(0,0)$, $(2,0)$,
+$(2,2)$.
+
+## Strategy Checklist
+
+- Put vertices in cyclic order.
+- Repeat the first vertex at the end.
+- Apply absolute value at the end.
+
+## Common Pitfalls
+
+- Listing vertices out of order.
+- Forgetting the absolute value.
+- Mixing polygon order (clockwise and counterclockwise).
+
+## Practice Problems
+
+<Problems problems="practice" />

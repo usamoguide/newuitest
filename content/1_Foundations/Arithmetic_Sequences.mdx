@@ -1,0 +1,81 @@
+---
+id: arithmetic-sequences
+title: Arithmetic Sequences
+author: USAMO Guide Team
+description: Constant differences, term formulas, and sum tricks.
+prerequisites: []
+---
+
+## Overview
+
+Arithmetic sequences grow by a fixed difference. They show up in counting,
+number theory, and series problems.
+
+## Key Ideas
+
+- $a_n = a_1 + (n-1)d$.
+- $S_n = \frac{n}{2}(a_1 + a_n)$.
+- Pairing terms from the ends makes sums fast.
+
+## Core Skills
+
+### Find the Term Number
+
+Solve $a_n = a_1 + (n-1)d$ for $n$ when the last term is known. This prevents
+missing or extra terms in a sum.
+
+### Use Pairing
+
+Pair the first and last terms to get a constant sum, then multiply by the
+number of pairs.
+
+### Handle Negative Differences
+
+The common difference can be negative. The formulas still work as long as the
+term order is consistent.
+
+## Worked Example
+
+Find the sum $3 + 7 + 11 + \cdots + 99$.
+
+This is an arithmetic sequence with $a_1 = 3$, $d = 4$, and $a_n = 99$.
+The number of terms is $n = \frac{99-3}{4} + 1 = 25$.
+So $S_n = \frac{25}{2}(3 + 99) = 25 \cdot 51 = 1275$.
+
+## More Examples
+
+### Example 1: Find a Term
+
+If $a_1=12$ and $d=-3$, find $a_6$.
+
+$a_6 = 12 + 5(-3) = -3$.
+
+### Example 2: Find $n$
+
+How many terms are in $5,9,13,\ldots,77$?
+
+$n = (77-5)/4 + 1 = 19$.
+
+### Example 3: Pairing
+
+Compute $2 + 5 + 8 + \cdots + 62$ by pairing.
+
+There are $n=(62-2)/3+1=21$ terms, and each pair sums to $64$, so
+$S_n = 21\cdot 32 = 672$.
+
+## Strategy Checklist
+
+- Identify $a_1$, $d$, and either $n$ or $a_n$.
+- Solve for $n$ before summing.
+- Pair terms when the list is long.
+- Check that the last term fits the sequence.
+
+## Common Pitfalls
+
+- Using $n-1$ incorrectly when solving for $n$.
+- Forgetting to check that the last term belongs to the sequence.
+- Treating a decreasing sequence as increasing and miscounting terms.
+
+## Practice Problems
+
+<Problems problems="practice" />

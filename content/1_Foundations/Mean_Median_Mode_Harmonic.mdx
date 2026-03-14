@@ -1,0 +1,72 @@
+---
+id: mean-median-mode-harmonic
+title: Mean, Median, Mode, and Harmonic Mean
+author: USAMO Guide Team
+description: Core averages and how to interpret them in contest problems.
+prerequisites: []
+---
+
+## Overview
+
+Averages summarize data but behave differently under outliers and transformations.
+Know which average is being used and what it preserves.
+
+Contest problems often hide which average is appropriate. Recognize when the
+mean is inappropriate and when the harmonic mean is required.
+
+## Key Ideas
+
+- Mean is sensitive to outliers; median is not.
+- Mode captures frequency, not magnitude.
+- Harmonic mean is suited to rates and reciprocals.
+- For weighted data, use weighted mean: $\bar{x} = \frac{\sum w_ix_i}{\sum w_i}$.
+- Median depends on ordering, not arithmetic.
+
+## Definitions
+
+Let the data be $a_1,\ldots,a_n$.
+
+- Mean: $\frac{a_1+\cdots+a_n}{n}$.
+- Median: middle value (or average of two middle values if $n$ is even).
+- Mode: most frequent value(s).
+- Harmonic mean: $\frac{n}{\sum \frac{1}{a_i}}$ (for positive values).
+
+## Worked Example
+
+The average speed for a 60-mile trip is 40 mph going and 60 mph returning.
+What is the overall average speed?
+
+Let each leg be 60 miles. Time out: $60/40 = 1.5$ hours. Time back: $60/60 = 1$ hour.
+Total distance is 120 miles, total time is 2.5 hours, so average speed is
+$120/2.5 = 48$ mph. This is the harmonic mean of 40 and 60.
+
+## More Examples
+
+### Example 1: Median with Even Count
+
+Data: $2, 5, 7, 9$. Median is $(5+7)/2 = 6$.
+
+### Example 2: Weighted Mean
+
+A test has 70% homework and 30% exam. Scores are 80 and 90. The overall score
+is $0.7\cdot 80 + 0.3\cdot 90 = 83$.
+
+### Example 3: Mode
+
+Data: $1,2,2,3,3,3,4$. Mode is $3$.
+
+## Strategy Checklist
+
+- Is the quantity a rate? If yes, consider harmonic mean.
+- Are there weights? Use weighted mean.
+- Is the data skewed? Median may be more meaningful than mean.
+
+## Common Pitfalls
+
+- Averaging speeds by simple mean instead of harmonic mean.
+- Confusing median with mean in skewed data.
+- Forgetting to sort before computing the median.
+
+## Practice Problems
+
+<Problems problems="practice" />

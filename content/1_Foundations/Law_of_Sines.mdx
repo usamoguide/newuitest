@@ -1,0 +1,73 @@
+---
+id: law-of-sines
+title: Law of Sines
+author: USAMO Guide Team
+description: Relate sides and angles using $\sin$.
+prerequisites: []
+---
+
+## Overview
+
+The Law of Sines is ideal for triangle problems with angles and one side. It
+also connects directly to circumradius.
+
+## Key Ideas
+
+- $\frac{a}{\sin A} = \frac{b}{\sin B} = \frac{c}{\sin C} = 2R$.
+- Use it when you know a side-angle pair.
+- It pairs well with the triangle angle sum to find a missing angle.
+
+## Core Skills
+
+### Match Each Side to Its Opposite Angle
+
+Label the triangle so that $a$ is opposite $A$, and so on, before writing the
+ratio. This avoids the most common mistake.
+
+### Use the Circumradius Form
+
+If $R$ is known or requested, use $a=2R\sin A$ directly.
+
+### Decide When It Is Appropriate
+
+This law is strongest when you have an angle and its opposite side, or two
+angles and a side. If all three sides are known, the Law of Cosines is cleaner.
+
+## Worked Example
+
+In $\triangle ABC$, $A=30^\circ$, $B=45^\circ$, and $a=10$. Find $b$.
+
+$\frac{10}{\sin 30^\circ} = \frac{b}{\sin 45^\circ}$ gives
+$20 = b\sqrt{2}$, so $b=10\sqrt{2}$.
+
+## More Examples
+
+### Example 1: Find an Angle
+
+In $\triangle ABC$, $a=8$, $b=10$, and $A=30^\circ$. Find $B$.
+
+$\frac{8}{\sin 30^\circ} = \frac{10}{\sin B}$ gives $16 = 10/\sin B$,
+so $\sin B = 5/8$.
+
+### Example 2: Circumradius
+
+If $a=12$ and $A=45^\circ$, find $R$.
+
+$12 = 2R\sin 45^\circ$ gives $R = 12/(\sqrt{2}) = 6\sqrt{2}$.
+
+## Strategy Checklist
+
+- Label opposite sides and angles clearly before substituting.
+- Use the triangle angle sum to compute a missing angle first.
+- Keep calculator mode consistent (degrees vs radians).
+- Check whether the Law of Cosines is a better fit.
+
+## Common Pitfalls
+
+- Using degrees for some angles and radians for others.
+- Swapping which side corresponds to which angle.
+- Forgetting that two angles might lead to an ambiguous case if not careful.
+
+## Practice Problems
+
+<Problems problems="practice" />

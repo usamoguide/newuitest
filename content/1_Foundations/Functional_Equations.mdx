@@ -1,0 +1,80 @@
+---
+id: functional-equations
+title: Functional Equations (Intro)
+author: USAMO Guide Team
+description: Substitution and pattern-spotting in simple functional equations.
+prerequisites: []
+---
+
+## Overview
+
+AMC and AIME functional equations usually test algebraic manipulation and
+strategic substitution rather than heavy theory.
+
+## Key Ideas
+
+- Plug in special values like $x=0$, $y=0$, $y=x$, and $y=-x$.
+- Check linear candidates: $f(x)=cx$, $f(x)=x+c$, $f(x)=cx+d$.
+- Use symmetry in the equation to deduce parity or linearity.
+
+## Core Skills
+
+### Use Strategic Substitution
+
+Plugging in $0$, $1$, $x$, $-x$, or $y=-x$ often isolates constants or shows
+that $f$ is even/odd.
+
+### Test Simple Families
+
+Try constant, linear, or multiplicative candidates. Many contest problems are
+designed so a small family works.
+
+### Build a Table of Values
+
+Once $f(0)$ or $f(1)$ is found, use the equation to compute $f(2)$, $f(3)$,
+and detect a pattern.
+
+## Worked Example
+
+Find all $f$ such that $f(x+y)=f(x)+f(y)$ for all real $x,y$.
+
+Set $y=0$ to get $f(0)=0$. Then $f(nx)=nf(x)$ for integers $n$ by induction.
+On contest problems, continuity or monotonicity is often implied, giving
+$f(x)=cx$ for some constant $c$.
+
+## More Examples
+
+### Example 1: Constant Solution Check
+
+Solve $f(x+y)=f(x)f(y)$ with $f(0)=2$.
+
+Plug $x=y=0$: $f(0)=f(0)^2$ gives $2=4$, impossible. So no such function.
+
+### Example 2: Odd Function
+
+If $f(x)+f(-x)=0$ for all $x$, what does this say about $f$?
+
+The function is odd: $f(-x)=-f(x)$.
+
+### Example 3: Linear Candidate
+
+Solve $f(x+y)=f(x)+f(y)+2$ for all $x,y$.
+
+Try $f(x)=ax+b$. Then $ax+ay+b = ax+b+ay+b+2$ gives $b=-2$. So $f(x)=ax-2$.
+
+## Strategy Checklist
+
+- Plug in $0$, $x$, and $-x$ first.
+- Test constant or linear candidates.
+- Track parity (even/odd) when $f(x)$ and $f(-x)$ appear.
+- Verify solutions in the original equation.
+
+## Common Pitfalls
+
+- Assuming continuity without checking the problem statement.
+- Forgetting to verify candidate functions.
+- Overlooking constant solutions.
+
+## Practice Problems
+
+<Problems problems="practice" />

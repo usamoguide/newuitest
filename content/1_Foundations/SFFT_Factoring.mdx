@@ -1,0 +1,76 @@
+---
+id: sfft-factoring
+title: Simon's Favorite Factoring Trick
+author: USAMO Guide Team
+description: Grouping four-term expressions into a product.
+prerequisites: []
+---
+
+## Overview
+
+SFFT is the reverse of FOIL. It helps factor expressions with four terms that
+match a rectangle pattern.
+
+## Key Ideas
+
+- $xy + kx + jy + jk = (x+j)(y+k)$.
+- Look for two pairs that share a common binomial.
+- Works especially well in integer and Diophantine problems.
+
+## Core Skills
+
+### Group by Pairs
+
+Reorder terms to group by $x$ and $y$ parts, then factor the shared binomial.
+
+### Create a Rectangle
+
+Think of the four terms as corners of a rectangle. The two side lengths become
+the binomial factors.
+
+### Scale First
+
+If coefficients are large, factor out a gcd to simplify before applying SFFT.
+
+## Worked Example
+
+Factor $ab + 3a + 5b + 15$.
+
+Group: $ab + 3a + 5b + 15 = a(b+3) + 5(b+3)$.
+Factor the common binomial: $(a+5)(b+3)$.
+
+## More Examples
+
+### Example 1: Reorder Terms
+
+Factor $6x + 2y + 3xy + 4$.
+
+Reorder as $3xy + 6x + 2y + 4 = 3x(y+2) + 2(y+2) = (3x+2)(y+2)$.
+
+### Example 2: Factor a GCD
+
+Factor $12xy + 8x + 6y + 4$.
+
+Factor out $2$: $2(6xy+4x+3y+2) = 2(3x+1)(2y+2)$.
+
+### Example 3: Solve for Integers
+
+Solve $xy + 4x + 3y = 18$ for integers $x,y$.
+
+Rewrite as $(x+3)(y+4)=30$.
+
+## Strategy Checklist
+
+- Reorder terms to form two clean pairs.
+- Factor out a gcd before grouping.
+- Check by expanding your factors.
+
+## Common Pitfalls
+
+- Mixing the constants across the wrong variable.
+- Missing the pairing when terms are not in order.
+- Forgetting to factor out a gcd first.
+
+## Practice Problems
+
+<Problems problems="practice" />

@@ -1,0 +1,79 @@
+---
+id: cauchy-schwarz
+title: Cauchy-Schwarz Inequality
+author: USAMO Guide Team
+description: A core inequality for bounds and maximization.
+prerequisites: []
+---
+
+## Overview
+
+Cauchy-Schwarz provides a clean upper or lower bound for sums of products. It
+is a staple in inequality and geometry problems.
+
+## Key Ideas
+
+- $(a_1^2+\cdots+a_n^2)(b_1^2+\cdots+b_n^2) \ge (a_1b_1+\cdots+a_nb_n)^2$.
+- Equality holds when the vectors are proportional.
+- Use it to bound dot products or sum-of-squares expressions.
+
+## Core Skills
+
+### Match Terms Carefully
+
+Decide which expressions should be the $a_i$ and $b_i$ lists so that the right
+side becomes what you want to bound.
+
+### Use the Engel Form
+
+For sums like $\sum \frac{x_i^2}{a_i}$, use $\left(\sum \frac{x_i^2}{a_i}\right)
+\left(\sum a_i\right) \ge (\sum x_i)^2$.
+
+### Check Equality
+
+Equality happens when $a_i/b_i$ is constant. Use it to identify where an
+extremum is achieved.
+
+## Worked Example
+
+Show that $a^2+b^2 \ge \frac{(a+b)^2}{2}$.
+
+Apply Cauchy-Schwarz to $(a,b)$ and $(1,1)$:
+$(a^2+b^2)(1^2+1^2) \ge (a+b)^2$.
+So $2(a^2+b^2) \ge (a+b)^2$, or $a^2+b^2 \ge \frac{(a+b)^2}{2}$.
+
+## More Examples
+
+### Example 1: Two-Term Bound
+
+Show that $(x+y)^2 \le 2(x^2+y^2)$.
+
+This is the same inequality with $a=x,b=y$.
+
+### Example 2: Engel Form
+
+Prove $\frac{1}{a} + \frac{1}{b} \ge \frac{4}{a+b}$ for $a,b>0$.
+
+Use $\left(\frac{1}{a}+\frac{1}{b}\right)(a+b) \ge (1+1)^2 = 4$.
+
+### Example 3: Dot Product Bound
+
+If $a_1^2+a_2^2=13$ and $b_1^2+b_2^2=5$, find the maximum of $a_1b_1+a_2b_2$.
+
+By Cauchy-Schwarz, it is at most $\sqrt{13\cdot 5} = \sqrt{65}$.
+
+## Strategy Checklist
+
+- Decide which terms to pair as $a_i$ and $b_i$.
+- Consider the Engel form for sums of fractions.
+- Use equality conditions to confirm the extremum.
+
+## Common Pitfalls
+
+- Using Cauchy-Schwarz when AM-GM or Jensen is simpler.
+- Missing the equality condition in optimization problems.
+- Choosing a pairing that complicates the right-hand side.
+
+## Practice Problems
+
+<Problems problems="practice" />

@@ -13,9 +13,21 @@ careful factoring.
 
 ## Key Ideas
 
-- If $a\equiv b\pmod n$, then $a^k\equiv b^k\pmod n$ for integer $k\ge0$.
-- The equation $ax+by=c$ has integer solutions iff $\gcd(a,b)\mid c$.
-- Use modular constraints to eliminate impossible cases quickly.
+
+## Core Skills
+
+### Reduce Modulo a Convenient Base
+
+Pick moduli that simplify the expression (like 2, 3, 4, 5, 8, 9, 11).
+
+### Use the Euclidean Algorithm
+
+Compute gcds quickly to test solvability of linear Diophantine equations.
+
+### Combine Congruences
+
+Use the Chinese Remainder Theorem for compatible mod conditions, even in
+simple two-modulus cases.
 
 ## Worked Example
 
@@ -23,6 +35,36 @@ Solve $7x\equiv 1\pmod{10}$.
 
 Check small residues: $7\cdot 3=21\equiv 1\pmod{10}$, so $x\equiv 3\pmod{10}$.
 
+## More Examples
+
+### Example 1: Linear Diophantine
+
+Determine if $6x+15y=9$ has integer solutions.
+
+$\gcd(6,15)=3$ divides $9$, so solutions exist.
+
+### Example 2: Mod Elimination
+
+Can $x^2\equiv 3\pmod 4$ happen?
+
+Squares are $0$ or $1$ mod $4$, so no.
+
+### Example 3: CRT Quick Solve
+
+Find $x$ with $x\equiv 2\pmod 3$ and $x\equiv 1\pmod 4$.
+
+Check $x=5$, which satisfies both; so $x\equiv 5\pmod{12}$.
+
+## Strategy Checklist
+
+- Choose a modulus that simplifies the expression.
+- Check gcd conditions for linear equations.
+- Verify solutions by substitution.
+
 ## Practice Problems
+
+- Using a modulus that does not provide new information.
+- Forgetting to check gcd divisibility.
+- Assuming a congruence has a solution without testing residues.
 
 <Problems problems="practice" />

@@ -23,7 +23,7 @@ module.exports = function (code) {
       {
         remarkPlugins: [
           gfm,
-          remarkMath,
+          [remarkMath, { singleDollarTextMath: true }],
           remarkExternalLinks,
           remarkFrontmatter,
           [remarkMdxFrontmatter, { name: 'frontmatter' }],

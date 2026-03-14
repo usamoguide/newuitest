@@ -17,12 +17,56 @@ Look for special inputs, symmetry, and invariants.
 - Substitute to eliminate variables and express everything in terms of $f(0)$.
 - If the equation is symmetric, try swapping variables to get new relations.
 
+## Core Skills
+
+### Normalize with Special Inputs
+
+Plug in $0$, $1$, $-1$, $x$, $-x$, or $y=x$ to isolate constants and discover
+parity or linearity.
+
+### Build a Solution Family
+
+Check constant and linear candidates first. Then verify directly in the
+original equation.
+
+### Use Symmetry and Swaps
+
+If the equation is symmetric in $x$ and $y$, swapping can give extra equations
+that eliminate terms.
+
 ## Worked Example
 
 If $f(x+1)=f(x)+2x+1$ and $f(0)=0$, find $f(3)$.
 
 Compute step by step: $f(1)=0+1$, $f(2)=1+3=4$, $f(3)=4+5=9$.
 This matches $f(n)=n^2$ for nonnegative integers.
+
+## More Examples
+
+### Example 1: Odd or Even
+
+If $f(x)+f(-x)=0$ for all $x$, what can you conclude?
+
+$f$ is odd: $f(-x)=-f(x)$.
+
+### Example 2: Linear Guess
+
+Solve $f(x+y)=f(x)+f(y)+2$ for all real $x,y$.
+
+Try $f(x)=ax+b$. Then $ax+ay+b = ax+b+ay+b+2$, so $b=-2$. Thus $f(x)=ax-2$.
+
+### Example 3: Constant Check
+
+Solve $f(x+y)=f(x)f(y)$ with $f(0)=0$.
+
+Plugging $x=0$ gives $f(y)=f(0)f(y)=0$, so $f$ is identically zero.
+
+## Strategy Checklist
+
+- Plug in $0$, $x$, and $-x$ first.
+- Test constant and linear candidates.
+- Swap variables to generate new relations.
+- Verify all candidates in the original equation.
 
 ## Practice Problems
 

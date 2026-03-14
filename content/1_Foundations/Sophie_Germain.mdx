@@ -1,0 +1,78 @@
+---
+id: sophie-germain-identity
+title: Sophie Germain Identity
+author: USAMO Guide Team
+description: Factoring $x^4 + 4y^4$ using a hidden difference of squares.
+prerequisites: []
+---
+
+## Overview
+
+Sophie Germain is the standard way to factor a sum of two fourth powers when
+one coefficient is $4$.
+
+## Key Ideas
+
+- $x^4 + 4y^4 = (x^2 - 2xy + 2y^2)(x^2 + 2xy + 2y^2)$.
+- Think of it as $(x^2 + 2y^2)^2 - (2xy)^2$.
+- It often appears in AIME-level factoring.
+
+## Core Skills
+
+### Confirm the Coefficient
+
+The identity applies only when the coefficient of $y^4$ is $4$. Factor out
+constants first to match this pattern.
+
+### Use Difference of Squares
+
+Recognize $x^4+4y^4$ as $(x^2+2y^2)^2-(2xy)^2$ to factor quickly.
+
+### Look for Substitutions
+
+If the expression is not in the exact form, set $x$ or $y$ as a binomial
+to create the pattern.
+
+## Worked Example
+
+Factor $a^4 + 4$.
+
+Write $a^4 + 4 = a^4 + 4\cdot 1^4$ and apply the identity:
+$(a^2 - 2a + 2)(a^2 + 2a + 2)$.
+
+## More Examples
+
+### Example 1: Factor a Constant
+
+Factor $16x^4 + 4y^4$.
+
+Factor out $4$ first to match the Sophie Germain pattern, then apply the
+identity.
+
+### Example 2: Binomial Substitution
+
+Factor $(x^2+1)^2 + 4x^2$.
+
+Treat it as $a^4+4b^4$ with $a=x^2+1$ and $b=x$.
+
+### Example 3: Integer Check
+
+Factor $81 + 4y^4$.
+
+Write $81 = 3^4$ and apply the identity with $x=3$.
+
+## Strategy Checklist
+
+- Check that the coefficient of $y^4$ is $4$ (or can be made $4$).
+- Use the difference of squares view for speed.
+- Substitute when the expression is a binomial square.
+
+## Common Pitfalls
+
+- Forgetting the coefficient $4$ is essential.
+- Mistaking it for a difference of squares without the middle step.
+- Applying the identity to $x^4+y^4$ without scaling.
+
+## Practice Problems
+
+<Problems problems="practice" />

@@ -1,0 +1,73 @@
+---
+id: power-of-a-point
+title: Power of a Point
+author: USAMO Guide Team
+description: Secants, tangents, and equal power products.
+prerequisites: [circle-angles]
+---
+
+## Overview
+
+Power of a point unifies secant and tangent length relations. It is essential
+for circle problems with a point outside the circle.
+
+## Key Ideas
+
+- For point $P$, $PA\cdot PB = PC\cdot PD$ for secants.
+- Tangent: $PT^2 = PA\cdot PB$.
+- Power formula: $\text{pow}(P) = OP^2 - r^2$.
+
+## Core Skills
+
+### Identify the Configuration
+
+Decide if you have two secants, a secant and tangent, or a chord through an
+interior point. The same power equation applies.
+
+### Use Consistent Segment Order
+
+Compute lengths from the external point to each intersection along the line.
+This prevents sign errors.
+
+### Convert to Radius Form
+
+If center $O$ and radius $r$ are known, use $OP^2-r^2$ to compute power quickly.
+
+## Worked Example
+
+A circle has radius $5$. Point $P$ is $8$ units from the center. If a secant
+through $P$ meets the circle at $A$ and $B$ with $PA=2$, find $PB$.
+
+Power is $8^2-5^2=39$. So $2\cdot PB = 39$, giving $PB=39/2$.
+
+## More Examples
+
+### Example 1: Tangent Length
+
+Point $P$ is $13$ units from the center of a circle of radius $5$. Find the
+tangent length.
+
+$PT^2=13^2-5^2=144$, so $PT=12$.
+
+### Example 2: Two Secants
+
+From $P$, one secant has $PA=3$ and $PB=15$. Another secant has $PC=5$.
+Find $PD$.
+
+$3\cdot 15 = 5\cdot PD$, so $PD=9$.
+
+## Strategy Checklist
+
+- Identify the external point and segment order.
+- Use $PA\cdot PB = PC\cdot PD$ consistently.
+- Switch to $OP^2-r^2$ if center and radius are known.
+
+## Common Pitfalls
+
+- Mixing up the order of points along the secant.
+- Using power-of-point for an interior point without absolute values.
+- Squaring a secant length instead of using the product.
+
+## Practice Problems
+
+<Problems problems="practice" />

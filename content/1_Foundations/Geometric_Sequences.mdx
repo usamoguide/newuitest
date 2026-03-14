@@ -1,0 +1,77 @@
+---
+id: geometric-sequences
+title: Geometric Sequences
+author: USAMO Guide Team
+description: Constant ratios, finite sums, and convergence.
+prerequisites: []
+---
+
+## Overview
+
+Geometric sequences multiply by a constant ratio. They are the backbone of
+exponential growth and infinite series.
+
+## Key Ideas
+
+- $g_n = g_1 r^{n-1}$.
+- $S_n = g_1 \frac{1-r^n}{1-r}$ for $r \ne 1$.
+- Infinite sums converge only when $|r| < 1$.
+
+## Core Skills
+
+### Find the Ratio
+
+Compute $r=g_{n+1}/g_n$ from consecutive terms. Confirm it is constant.
+
+### Use Finite vs. Infinite Sums
+
+Apply $S_n$ only for finite sums. Use $S_\infty = g_1/(1-r)$ only when
+$|r|<1$.
+
+### Rewrite with Powers
+
+Convert repeated multiplication into exponent form before simplifying.
+
+## Worked Example
+
+Find $1 + \frac{1}{3} + \frac{1}{9} + \cdots$.
+
+This is geometric with $g_1 = 1$ and $r = \frac{1}{3}$. Since $|r| < 1$,
+$S_\infty = \frac{1}{1-\frac{1}{3}} = \frac{3}{2}$.
+
+## More Examples
+
+### Example 1: Term Formula
+
+If $g_1=6$ and $r=2$, find $g_5$.
+
+$g_5 = 6\cdot 2^4 = 96$.
+
+### Example 2: Finite Sum
+
+Find the sum of the first 6 terms of $3,6,12,\ldots$.
+
+$S_6 = 3\cdot (1-2^6)/(1-2) = 3(63) = 189$.
+
+### Example 3: Convergence Check
+
+Does $5 - 2.5 + 1.25 - \cdots$ converge? If so, find the sum.
+
+$r=-1/2$ so $|r|<1$ and $S_\infty = 5/(1+1/2)=10/3$.
+
+## Strategy Checklist
+
+- Compute the ratio from consecutive terms.
+- Decide whether the sum is finite or infinite.
+- Check $|r|<1$ before using the infinite formula.
+- Keep powers as $r^{n-1}$ to avoid off-by-one errors.
+
+## Common Pitfalls
+
+- Applying the infinite sum formula when $|r| \ge 1$.
+- Mixing up $r^n$ vs. $r^{n-1}$ in the term formula.
+- Using $r$ from non-consecutive terms without checking consistency.
+
+## Practice Problems
+
+<Problems problems="practice" />

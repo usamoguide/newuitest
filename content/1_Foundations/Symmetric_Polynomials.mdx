@@ -1,0 +1,76 @@
+---
+id: symmetric-polynomials
+title: Symmetric Polynomials
+author: USAMO Guide Team
+description: Reduce symmetric expressions using sums and products.
+prerequisites: []
+---
+
+## Overview
+
+Symmetric expressions in $x$ and $y$ often depend only on $x+y$ and $xy$.
+Recognizing this saves time and algebra.
+
+## Key Ideas
+
+- For two variables, express everything in $s=x+y$ and $p=xy$.
+- If $x+1/x$ appears, substitute $t = x + 1/x$.
+- Even-degree symmetric polynomials often reduce to lower degree.
+
+## Core Skills
+
+### Use $s$ and $p$
+
+Rewrite $x^2+y^2$, $x^3+y^3$, and other symmetric sums in terms of
+$s=x+y$ and $p=xy$.
+
+### Handle Reciprocals
+
+If $x$ and $1/x$ appear, use $t=x+1/x$ and derive $x^2+1/x^2=t^2-2$.
+
+### Reduce Degree
+
+Use identities to express higher-degree terms using lower-degree symmetric sums.
+
+## Worked Example
+
+If $x+y=6$ and $xy=5$, find $x^2+y^2$.
+
+Use $x^2+y^2 = (x+y)^2 - 2xy = 36 - 10 = 26$.
+
+## More Examples
+
+### Example 1: Cubic Sum
+
+If $x+y=4$ and $xy=1$, find $x^3+y^3$.
+
+$x^3+y^3=(x+y)^3-3xy(x+y)=64-12=52$.
+
+### Example 2: Reciprocal Sum
+
+If $x+1/x=3$, find $x^2+1/x^2$.
+
+$x^2+1/x^2 = 3^2-2 = 7$.
+
+### Example 3: Quartic Sum
+
+If $x+y=2$ and $xy=-1$, find $x^4+y^4$.
+
+First $x^2+y^2 = (x+y)^2-2xy=4+2=6$, then
+$x^4+y^4 = (x^2+y^2)^2-2x^2y^2 = 36-2 = 34$.
+
+## Strategy Checklist
+
+- Set $s=x+y$ and $p=xy$ early.
+- Use known identities to lower the degree.
+- For reciprocals, use $t=x+1/x$.
+
+## Common Pitfalls
+
+- Expanding instead of using symmetric formulas.
+- Forgetting that $x$ and $y$ might be swapped without changing the value.
+- Mixing up $s$ and $p$ when substituting.
+
+## Practice Problems
+
+<Problems problems="practice" />

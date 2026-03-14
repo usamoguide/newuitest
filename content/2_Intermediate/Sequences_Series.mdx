@@ -11,17 +11,95 @@ prerequisites: ["advanced-algebra"]
 Sequences appear across AMC and AIME. Recognize standard forms and convert
 between recursive and closed forms.
 
+Recurrences are especially common: compute small cases, write a relation, and
+solve or iterate to the target.
+
 ## Key Ideas
 
 - Arithmetic sequence: $a_n=a_1+(n-1)d$.
 - Geometric sequence: $a_n=a_1 r^{n-1}$.
 - Telescoping sums simplify when terms cancel in pairs.
+- Recurrences model "build from smaller" structures.
+- Linear recurrences with constant coefficients can be solved via
+	characteristic equations.
+
+## Core Skills
+
+### Convert Recurrence to Closed Form
+
+Compute initial terms, guess a form, then verify by induction or by solving
+the characteristic equation.
+
+### Spot Telescoping
+
+Rewrite terms with partial fractions or differences so cancellation is visible.
+
+### Identify Growth Rates
+
+Use ratios to determine whether sequences are arithmetic, geometric, or
+neither.
 
 ## Worked Example
 
 If $a_1=3$ and $a_{n+1}=2a_n+1$, compute $a_3$.
 
 Then $a_2=2\cdot3+1=7$, and $a_3=2\cdot7+1=15$.
+
+## Recurrence Toolkit
+
+### Step-by-step method
+
+1. Compute small cases to spot a pattern.
+2. Write a recurrence that reduces size $n$ to smaller sizes.
+3. Use base cases to compute the desired term or solve explicitly.
+
+### Engineering Induction (pattern guessing)
+
+Compute a few values, guess a closed form, then use it to answer the problem.
+It is fast but not always rigorous.
+
+### Linear Recurrence (constant coefficients)
+
+If $f(n) = c_1 f(n-1) + c_2 f(n-2)$, try $f(n)=r^n$ to get the characteristic
+equation $r^2 - c_1 r - c_2 = 0$. Solve for $r$, then combine the solutions and
+fit constants using base cases.
+
+## More Examples
+
+### Example 1: Domino Tilings
+
+Let $f(n)$ be the number of ways to tile a $2\times n$ board with $1\times2$
+dominoes. The last placement is either a vertical domino (leaving $2\times(n-1)$)
+or two horizontal dominoes (leaving $2\times(n-2)$). So
+
+$$f(n)=f(n-1)+f(n-2).$$
+
+With $f(1)=1$, $f(2)=2$, we get $f(5)=8$.
+
+### Example 2: Binary Strings
+
+Let $a_n$ be the number of binary strings of length $n$ with no consecutive 1s.
+If the last bit is 0, there are $a_{n-1}$ choices; if the last bit is 1, the
+previous bit must be 0, giving $a_{n-2}$ choices. So $a_n=a_{n-1}+a_{n-2}$.
+
+### Example 3: Telescoping Sum
+
+Compute $\sum_{k=1}^{n} \frac{1}{k(k+1)}$.
+
+Use $\frac{1}{k(k+1)}=\frac{1}{k}-\frac{1}{k+1}$ to get $1-\frac{1}{n+1}$.
+
+## Strategy Checklist
+
+- Classify the sequence (arithmetic, geometric, recurrence).
+- Compute a few terms before guessing a formula.
+- Use characteristic equations for linear recurrences.
+- Look for cancellation in sums.
+
+## Common Pitfalls
+
+- Off-by-one errors in index shifts.
+- Using a closed form without verifying base cases.
+- Mixing arithmetic and geometric formulas.
 
 ## Practice Problems
 

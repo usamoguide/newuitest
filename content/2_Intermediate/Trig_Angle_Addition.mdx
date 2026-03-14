@@ -1,0 +1,95 @@
+---
+id: trig-angle-addition
+title: Angle Addition and Double/Half Angles
+author: USAMO Guide Team
+description: Sum, difference, double-angle, and half-angle formulas.
+prerequisites: [trig-identities]
+---
+
+## Overview
+
+Angle addition formulas let you compute exact values for angles like $15^\circ$
+or $75^\circ$, and double/half angles drive many contest identities.
+
+## Core Skills
+
+### Choose a Formula Direction
+
+Use sum/difference to build special angles, and double/half-angle to rewrite
+expressions into squares.
+
+### Track Signs Carefully
+
+For half-angle formulas, decide the sign using the quadrant of $\theta/2$.
+
+### Simplify Before Expanding
+
+If the angle is special (like $15^\circ$ or $75^\circ$), write it as a sum of
+$30^\circ$ and $45^\circ$ to keep radicals clean.
+
+## Sum and Difference
+
+$$\sin(\alpha\pm\beta)=\sin\alpha\cos\beta\pm\cos\alpha\sin\beta$$
+
+$$\cos(\alpha\pm\beta)=\cos\alpha\cos\beta\mp\sin\alpha\sin\beta$$
+
+$$\tan(\alpha\pm\beta)=\frac{\tan\alpha\pm\tan\beta}{1\mp\tan\alpha\tan\beta}$$
+
+## Double Angle
+
+$$\sin 2\theta = 2\sin\theta\cos\theta$$
+
+$$\cos 2\theta = \cos^2\theta-\sin^2\theta = 2\cos^2\theta-1 = 1-2\sin^2\theta$$
+
+$$\tan 2\theta = \frac{2\tan\theta}{1-\tan^2\theta}$$
+
+## Half Angle
+
+$$\sin\frac{\theta}{2} = \pm\sqrt{\frac{1-\cos\theta}{2}}$$
+
+$$\cos\frac{\theta}{2} = \pm\sqrt{\frac{1+\cos\theta}{2}}$$
+
+$$\tan\frac{\theta}{2} = \frac{\sin\theta}{1+\cos\theta} = \frac{1-\cos\theta}{\sin\theta}$$
+
+## Worked Example
+
+Compute $\sin 75^\circ$.
+
+$75^\circ = 45^\circ + 30^\circ$, so
+
+$$\sin 75^\circ = \frac{\sqrt{6}+\sqrt{2}}{4}.$$ 
+
+## More Examples
+
+### Example 1: Cosine of $15^\circ$
+
+$\cos 15^\circ = \cos(45^\circ-30^\circ) = \frac{\sqrt{6}+\sqrt{2}}{4}$.
+
+### Example 2: Double Angle
+
+If $\sin\theta=3/5$ and $\cos\theta=4/5$, find $\sin 2\theta$.
+
+$\sin 2\theta = 2\sin\theta\cos\theta = 24/25$.
+
+### Example 3: Half Angle
+
+If $\cos\theta = -1/2$ and $\theta$ is in quadrant II, find $\sin(\theta/2)$.
+
+$\theta/2$ is in quadrant I, so $\sin(\theta/2)=\sqrt{(1-\cos\theta)/2}
+=\sqrt{(1+1/2)/2}=\sqrt{3/4}=\sqrt{3}/2$.
+
+## Strategy Checklist
+
+- Choose sum/difference or double/half-angle based on the target.
+- Use quadrant signs for half-angle formulas.
+- Keep radicals simplified.
+
+## Common Pitfalls
+
+- Using $\sin(\alpha+\beta)=\sin\alpha+\sin\beta$ (false).
+- Forgetting quadrant signs on half-angle formulas.
+- Mixing degrees and radians in the same calculation.
+
+## Practice Problems
+
+<Problems problems="practice" />

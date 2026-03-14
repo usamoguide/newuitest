@@ -43,7 +43,7 @@ export async function createXdmNode({ id, node, content }, api) {
       {
         remarkPlugins: [
           gfm,
-          remarkMath,
+          [remarkMath, { singleDollarTextMath: true }],
           remarkFrontmatter,
           remarkMdxFrontmatter,
           [remarkExtractAST, { mdast }],

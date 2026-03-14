@@ -1,0 +1,80 @@
+---
+id: trig-inverse-functions
+title: Inverse Trig Functions
+author: USAMO Guide Team
+description: Principal values and composition traps.
+prerequisites: [trig-unit-circle]
+---
+
+## Overview
+
+Inverse trig functions return principal values. Many contest errors come from
+forgetting these restricted ranges.
+
+## Principal Ranges
+
+- $\arcsin x \in [-\pi/2, \pi/2]$.
+- $\arccos x \in [0, \pi]$.
+- $\arctan x \in (-\pi/2, \pi/2)$.
+
+## Core Skills
+
+### Use Principal Ranges
+
+Always map the result back into the correct range for the inverse function.
+
+### Simplify Compositions
+
+For $\arcsin(\sin x)$ and $\arccos(\cos x)$, reduce $x$ to the principal range
+first.
+
+### Convert Units
+
+Keep angles in degrees or radians consistently; convert early if needed.
+
+## Compositions
+
+- $\sin(\arcsin x)=x$ for $|x|\le 1$.
+- $\arcsin(\sin x)$ equals $x$ only if $x$ is in $[-\pi/2,\pi/2]$.
+
+## Worked Example
+
+Evaluate $\arcsin(\sin 200^\circ)$.
+
+$\sin 200^\circ = -\sin 20^\circ$, so the principal value is $-20^\circ$.
+
+## More Examples
+
+### Example 1: Arccos Composition
+
+Evaluate $\arccos(\cos 240^\circ)$.
+
+$\cos 240^\circ = -1/2$, so the principal value is $120^\circ$.
+
+### Example 2: Arctan Range
+
+Evaluate $\arctan(\tan 150^\circ)$.
+
+$\tan 150^\circ = -1/\sqrt{3}$, so the principal value is $-30^\circ$.
+
+### Example 3: Radian Form
+
+Evaluate $\arcsin(\sin(5\pi/6))$.
+
+$\sin(5\pi/6)=1/2$, so the principal value is $\pi/6$.
+
+## Strategy Checklist
+
+- Identify the principal range of the inverse function.
+- Reduce the angle to that range.
+- Keep degree/radian units consistent.
+
+## Common Pitfalls
+
+- Assuming $\arcsin(\sin x)=x$ for all $x$.
+- Using degrees for some steps and radians for others.
+- Returning an angle outside the principal range.
+
+## Practice Problems
+
+<Problems problems="practice" />

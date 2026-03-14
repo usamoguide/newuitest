@@ -1,0 +1,75 @@
+---
+id: complex-basics
+title: Complex Basics
+author: USAMO Guide Team
+description: Definitions, $i$ powers, and the rectangular form.
+prerequisites: []
+---
+
+## Overview
+
+Complex numbers extend the real line to a plane. Most AMC/AIME problems start
+with algebraic manipulation and then switch to geometry when convenient.
+
+## Key Ideas
+
+- $z = a + bi$ with $i^2 = -1$.
+- Powers of $i$ repeat every $4$.
+- Real part is $a$, imaginary part is $b$.
+
+## Core Skills
+
+### Separate Real and Imaginary Parts
+
+Write $z=a+bi$ and equate real and imaginary parts to solve equations.
+
+### Use $i^2=-1$ Early
+
+Simplify powers of $i$ before multiplying out to avoid sign mistakes.
+
+### Convert Between Forms
+
+Switch between algebraic and geometric interpretations when helpful.
+
+## Worked Example
+
+Compute $i^{2023}$.
+
+Powers of $i$ cycle with period $4$. Since $2023 \equiv 3 \pmod 4$,
+$i^{2023} = i^3 = -i$.
+
+## More Examples
+
+### Example 1: Add and Multiply
+
+Compute $(3+2i)(1-4i)$.
+
+$3-12i+2i-8i^2 = 11-10i$.
+
+### Example 2: Solve a Simple Equation
+
+Solve $z+2i=3-4i$.
+
+$z=3-6i$.
+
+### Example 3: Powers of $i$
+
+Compute $i^{58}$.
+
+$58\equiv 2\pmod 4$, so $i^{58}=-1$.
+
+## Strategy Checklist
+
+- Reduce powers of $i$ modulo $4$.
+- Keep real and imaginary parts separate.
+- Check arithmetic with $i^2=-1$.
+
+## Common Pitfalls
+
+- Forgetting the period $4$ for powers of $i$.
+- Treating the imaginary part as $bi$ instead of $b$.
+- Dropping the $i^2=-1$ sign change.
+
+## Practice Problems
+
+<Problems problems="practice" />

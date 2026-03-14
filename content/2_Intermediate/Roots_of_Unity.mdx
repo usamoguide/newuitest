@@ -1,0 +1,74 @@
+---
+id: roots-of-unity
+title: Roots of Unity
+author: USAMO Guide Team
+description: Geometry and sums of $n$th roots.
+prerequisites: [complex-polar-form]
+---
+
+## Overview
+
+Roots of unity are equally spaced points on the unit circle. Their symmetry
+collapses many sums to $0$.
+
+## Core Skills
+
+### Parameterize the Roots
+
+Write $z_k=e^{2\pi i k/n}$ and use symmetry of the regular $n$-gon.
+
+### Use the Geometric Sum
+
+Apply $1+z+\cdots+z^{n-1}=0$ when $z^n=1$ and $z\ne 1$.
+
+### Filter by Exponents
+
+If a sum includes $z^{mk}$, reduce $m$ modulo $n$ to see which terms survive.
+
+## Key Ideas
+
+- $z^n=1$ gives $z_k = e^{2\pi i k/n}$.
+- The roots form a regular $n$-gon centered at the origin.
+- $1 + z + z^2 + \cdots + z^{n-1} = 0$ for $z^n=1$, $z\ne 1$.
+
+## Worked Example
+
+If $z^5=1$ and $z\ne 1$, compute $1+z+z^2+z^3+z^4$.
+
+This is the full sum of the 5th roots except $1$, so it equals $0$.
+
+## More Examples
+
+### Example 1: Sum of All Roots
+
+Find the sum of all cube roots of unity.
+
+It is $0$.
+
+### Example 2: Power Sum
+
+If $\omega^7=1$ and $\omega\ne 1$, find $1+\omega^2+\omega^4+\omega^6$.
+
+This is half the roots; the sum is $-1$.
+
+### Example 3: Geometry Interpretation
+
+What is the sum of the vertices of a regular $n$-gon centered at the origin?
+
+By symmetry, it is $0$.
+
+## Strategy Checklist
+
+- Write roots in exponential form.
+- Use geometric series for full sums.
+- Reduce exponents modulo $n$.
+
+## Common Pitfalls
+
+- Forgetting to exclude the root $z=1$.
+- Treating the sum as $5$ instead of $0$.
+- Forgetting to reduce exponents modulo $n$.
+
+## Practice Problems
+
+<Problems problems="practice" />
