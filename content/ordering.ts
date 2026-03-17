@@ -115,7 +115,7 @@ const MODULE_ORDERING: { [key in SectionID]: Chapter[] } = {
     },
     {
       name: 'Number Theory',
-      items: ['number-theory-intermediate'],
+      items: ['modular-arithmetic', 'number-theory-intermediate'],
     },
     {
       name: 'Euclidean Geometry',

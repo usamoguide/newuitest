@@ -158,6 +158,14 @@ export default function IndexPage({ path }): JSX.Element {
               />
               <span>Join our Discord server</span>
             </a>
+            <a
+              href="https://contests.usamoguide.com/"
+              target="_blank"
+              rel="noreferrer"
+              className={classNames(linkTextStyles, 'inline-flex items-center gap-2')}
+            >
+              <span>Explore contests platform</span>
+            </a>
           </div>
           <div className="h-4 sm:h-6 md:h-16"></div>
         </div>
@@ -282,14 +290,14 @@ export default function IndexPage({ path }): JSX.Element {
         <div className="h-16 md:h-20 2xl:h-36"></div>
         <div className={containerClasses}>
           <div className="dark:hidden">
-            <h1 className={classNames(headerClasses)}>Trusted by thousands</h1>
+            <h1 className={classNames(headerClasses)}>Trusted by Students all over the World!</h1>
           </div>
           <div className="invisible h-0 dark:visible dark:h-auto">
             <GlowingText
               className={classNames(headerClassesNoText, 'text-white')}
               extraGlow
             >
-              Trusted by thousands.
+              Trusted by Students all over the World!
             </GlowingText>
           </div>
 
@@ -298,7 +306,7 @@ export default function IndexPage({ path }): JSX.Element {
           <p className={subtextClasses}>
             This guide is written by{' '}
             <GradientText>top math contest performers</GradientText> and
-            educators who care about clean, rigorous solutions.
+            educators who care about spreading math knowledge to everyone.
           </p>
           <div className="h-4 2xl:h-12"></div>
 
@@ -336,15 +344,6 @@ export default function IndexPage({ path }): JSX.Element {
 
           <div className="grid gap-4 sm:gap-6 md:grid-cols-2 lg:gap-8 2xl:grid-cols-3">
             <CPIProjectCard
-              title="Weekly Problem Sessions"
-              icon={AcademicCapIcon}
-              iconClasses="from-fuchsia-500 to-purple-600"
-              url="/groups"
-            >
-              Join guided sessions focused on problem solving, solution
-              writing, and proof critique.
-            </CPIProjectCard>
-            <CPIProjectCard
               title="AoPS Wiki Archive"
               icon={TerminalIcon}
               iconClasses="from-orange-400 to-pink-600"
@@ -354,31 +353,15 @@ export default function IndexPage({ path }): JSX.Element {
               place.
             </CPIProjectCard>
             <CPIProjectCard
-              title="Study Groups"
-              icon={AcademicCapIcon}
-              iconClasses="from-green-400 to-cyan-500"
-              url="/groups"
-            >
-              A learning management system for clubs, classes, and teams.
-            </CPIProjectCard>
-            <CPIProjectCard
               title="Mock Contests"
               icon={UserGroupIcon}
               iconClasses="from-purple-500 to-indigo-500"
-              url="/groups"
+              url="https://contests.usamoguide.com/"
             >
               Run timed sets modeled after AMC/AIME/USAMO to build endurance.
             </CPIProjectCard>
             <CPIProjectCard
-              title="Proofwriting Clinics"
-              icon={ChartBarIcon}
-              iconClasses="from-cyan-400 to-sky-500"
-              url="/groups"
-            >
-              Short workshops that emphasize rigor, structure, and clarity.
-            </CPIProjectCard>
-            <CPIProjectCard
-              title="Mentorship"
+              title="Study Groups/Mentorship"
               icon={CogIcon}
               iconClasses="from-yellow-400 to-orange-500"
               url="/groups"
@@ -417,7 +400,7 @@ export default function IndexPage({ path }): JSX.Element {
           <div className="group relative inline-block">
             <GlowingRing>
               <a
-                href="https://docs.google.com/document/d/13QpXqdiYQwjBLnywGL1FUG7GFdh8SM_1NigIkJl-A7k/edit?usp=sharing"
+                href="https://docs.google.com/document/d/1AUNOq6OlVcSZN_gUPfvyhimlh9hA4GNvNaLdzyflX_8/edit?usp=sharing"
                 target="_blank"
                 rel="noreferrer"
                 className={classNames(whiteButtonClasses, 'inline-block')}
@@ -508,10 +491,10 @@ export default function IndexPage({ path }): JSX.Element {
                       bug, typo, broken link, unclear explanation, etc), use the
                       "Contact Us" button. Alternatively, email us at{' '}
                       <a
-                        href="mailto:thejourneyofpranav@gmail.com"
+                        href="mailto:contact@usamoguide.com"
                         className="text-blue-600 underline dark:text-blue-400"
                       >
-                        thejourneyofpranav@gmail.com
+                        contact@usamoguide.com
                       </a>
                       .
                     </p>
@@ -605,7 +588,7 @@ export default function IndexPage({ path }): JSX.Element {
       </div>
       {/*End FAQ*/}
 
-      <ContributorsSection />
+      {/*<ContributorsSection />*/}
 
       <div className="section-footer bg-gray-100 dark:bg-gray-900">
         <div className="mx-auto max-w-(--breakpoint-xl) px-4 py-12">

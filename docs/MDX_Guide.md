@@ -48,7 +48,7 @@ Use # only for the page title in frontmatter. Use ## and below for sections:
 
 ## Links
 
-[USACO Guide](https://usaco.guide)
+[USAMO Guide](https://usamoguide.com)
 
 ## Images
 
@@ -75,20 +75,6 @@ Block math uses $$:
 $$
 \sum_{i=1}^{n} i = \frac{n(n+1)}{2}
 $$
-
-## Code blocks
-
-Use fenced code blocks with a language tag:
-
-```cpp
-int main() {
-  return 0;
-}
-```
-
-```python
-print("hello")
-```
 
 ## Adding problems
 

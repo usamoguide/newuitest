@@ -74,8 +74,7 @@ export default function LicensePage(props: PageProps) {
               <ul className="list-disc pl-10">
                 <li>
                   If you're offering free classes/are running a school club and
-                  would like specific resources, feel free to reach out to guide
-                  coordinator Nathan Wang (email below) and we will try our best
+                  would like specific resources, feel free to reach out to our Founder Pranav Ramesh (email below) and we will try our best
                   to help!
                 </li>
               </ul>
@@ -85,7 +84,7 @@ export default function LicensePage(props: PageProps) {
               <ul className="list-disc pl-10">
                 <li>
                   If you would like to contribute to this guide, please reach
-                  out to guide coordinator Nathan Wang; we'd greatly appreciate
+                  out to our Founder Pranav Ramesh; we'd greatly appreciate
                   the help! Credit will be given where credit is due.
                 </li>
               </ul>
@@ -119,10 +118,10 @@ export default function LicensePage(props: PageProps) {
             like to request to use these resources outside of the authorized use
             cases described above, please contact us at{' '}
             <a
-              href="mailto:usamoguide@gmail.com"
+              href="mailto:contact@usamoguide.com"
               className="text-blue-500 underline hover:text-blue-700 dark:text-blue-400 dark:hover:text-blue-300"
             >
-              usamoguide@gmail.com
+              contact@usamoguide.com
             </a>
             .
           </p>

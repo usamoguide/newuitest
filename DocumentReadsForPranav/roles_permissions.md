@@ -50,6 +50,5 @@ Yes. The system uses a join table (public.user_roles) with a composite primary k
 - Join contests: POST /api/contest-join
 - Save/submit solutions: POST /api/submissions
 - View submission versions: GET /api/submission-versions
-- View leaderboards: GET /api/leaderboards
 - View rating history: GET /api/ratings
 - Log anti-cheat events: POST /api/anti-cheat-log
