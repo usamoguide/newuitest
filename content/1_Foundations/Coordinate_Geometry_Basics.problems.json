@@ -1,4 +1,56 @@
 {
   "MODULE_ID": "coordinate-geometry-basics",
-  "practice": []
+  "practice": [
+    {
+      "uniqueId": "amc10a-2023-19",
+      "name": "Problem 19 (2023 AMC 10A)",
+      "url": "https://artofproblemsolving.com/wiki/index.php/2023_AMC_10A_Problems/Problem_19",
+      "source": "AMC 10",
+      "difficulty": "Hard",
+      "isStarred": false,
+      "tags": [
+        "Coordinate Geometry",
+        "Rotations",
+        "Perpendicular Bisectors"
+      ],
+      "statement": "The line segment from $A(1, 2)$ to $B(3, 3)$ can be transformed to the line segment from $A'(3, 1)$ to $B'(4, 3)$, sending $A$ to $A'$ and $B$ to $B'$, by a rotation centered at the point $P(s, t)$. What is $|s - t|$?",
+      "solutionMetadata": {
+        "kind": "none"
+      }
+    },
+    {
+      "uniqueId": "amc10a-2014-18",
+      "name": "Problem 18 (2014 AMC 10A)",
+      "url": "https://artofproblemsolving.com/wiki/index.php/2014_AMC_10A_Problems/Problem_18",
+      "source": "AMC 10",
+      "difficulty": "Medium",
+      "isStarred": false,
+      "tags": [
+        "Coordinate Geometry",
+        "Squares",
+        "Slope"
+      ],
+      "statement": "A square in the coordinate plane has vertices whose $y$-coordinates are $0$, $1$, $4$, and $5$. What is the area of the square?",
+      "solutionMetadata": {
+        "kind": "none"
+      }
+    },
+    {
+      "uniqueId": "amc12b-2023-10",
+      "name": "Problem 10 (2023 AMC 12B)",
+      "url": "https://artofproblemsolving.com/wiki/index.php?title=2023_AMC_12B_Problems/Problem_10",
+      "source": "AMC 12",
+      "difficulty": "Medium",
+      "isStarred": false,
+      "tags": [
+        "Coordinate Geometry",
+        "Circles",
+        "Slope"
+      ],
+      "statement": "In the $xy$-plane, a circle of radius $4$ with center on the positive $x$-axis is tangent to the $y$-axis at the origin, and a circle of radius $10$ with center on the positive $y$-axis is tangent to the $x$-axis at the origin. What is the slope of the line passing through the two points at which these circles intersect?",
+      "solutionMetadata": {
+        "kind": "none"
+      }
+    }
+  ]
 }
