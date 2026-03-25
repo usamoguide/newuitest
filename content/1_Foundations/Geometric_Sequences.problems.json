@@ -1,4 +1,38 @@
 {
   "MODULE_ID": "geometric-sequences",
-  "practice": []
+  "practice": [
+  {
+    "uniqueId": "amc12a-2025-5",
+    "name": "Problem 5 (2025 AMC 12A)",
+    "url": "https://artofproblemsolving.com/wiki/index.php/2025_AMC_12A_Problems/Problem_5",
+    "source": "AMC 12A",
+    "difficulty": "Easy",
+    "isStarred": false,
+    "tags": [
+      "Algebra",
+      "Geometric Sequences"
+    ],
+    "statement": "The first three terms of a geometric sequence are $2^a$, $2^b$, and $2^c$, where $a, b,$ and $c$ are the side lengths of a triangle. Which of the following must be true about the triangle?",
+    "solutionMetadata": {
+      "kind": "none"
+    }
+  },
+  {
+    "uniqueId": "amc10a-2025-11",
+    "name": "Problem 11 (2025 AMC 10A)",
+    "url": "https://artofproblemsolving.com/wiki/index.php/2025_AMC_10A_Problems/Problem_11",
+    "source": "AMC 10A",
+    "difficulty": "Medium-Easy",
+    "isStarred": false,
+    "tags": [
+      "Algebra",
+      "Geometric Sequences",
+      "Logarithms"
+    ],
+    "statement": "Let $a, b, c$ be a geometric sequence of positive real numbers. If $\\log_a b, \\log_b c, \\log_c a$ is an arithmetic sequence, what is the common difference of that arithmetic sequence?",
+    "solutionMetadata": {
+      "kind": "none"
+    }
+  }
+]
 }
