@@ -1,4 +1,74 @@
 {
   "MODULE_ID": "law-of-cosines",
-  "practice": []
+  "practice": [
+  {
+    "uniqueId": "amc12a-2025-24",
+    "name": "Problem 24 (2025 AMC 12A)",
+    "url": "https://artofproblemsolving.com/wiki/index.php?title=2025_AMC_12A_Problems/Problem_24",
+    "source": "AMC 12A",
+    "difficulty": "Hard",
+    "isStarred": false,
+    "tags": [
+      "Geometry",
+      "Circles",
+      "Tangency"
+    ],
+    "statement": "A circle of radius r is surrounded by n circles of radius R externally tangent to the central circle and sequentially tangent to each other. Then r/R can be written as (a - b√c)/d where a, b, c, d are integers. What is a + b + c + d?",
+    "solutionMetadata": {
+      "kind": "none"
+    }
+  },
+  {
+    "uniqueId": "amc12a-2024-19",
+    "name": "Problem 19 (2024 AMC 12A)",
+    "url": "https://artofproblemsolving.com/wiki/index.php?title=2024_AMC_12A_Problems/Problem_19",
+    "source": "AMC 12A",
+    "difficulty": "Hard",
+    "isStarred": false,
+    "tags": [
+      "Geometry",
+      "Cyclic Quadrilateral",
+      "Law of Cosines"
+    ],
+    "statement": "Find the length of the shorter diagonal of a cyclic quadrilateral with given side lengths using properties of cyclic quadrilaterals, Law of Cosines, Law of Sines, or Ptolemy's Theorem.",
+    "solutionMetadata": {
+      "kind": "none"
+    }
+  },
+  {
+    "uniqueId": "aime-2018-i-4",
+    "name": "Problem 4 (2018 AIME I)",
+    "url": "https://artofproblemsolving.com/wiki/index.php/2018_AIME_I_Problems/Problem_4",
+    "source": "AIME I",
+    "difficulty": "Medium",
+    "isStarred": false,
+    "tags": [
+      "Geometry",
+      "Triangle",
+      "Algebra"
+    ],
+    "statement": "In triangle ABC, AB = 6, AC = 8, and BC = 10. Point D lies strictly between A and B on AB and point E lies strictly between A and C on AC so that AD = AE and BE = CD. Then AD can be expressed in the form m/n, where m and n are relatively prime positive integers. Find m + n.",
+    "solutionMetadata": {
+      "kind": "none"
+    }
+  },
+  {
+    "uniqueId": "amc12b-2022-19",
+    "name": "Problem 19 (2022 AMC 12B)",
+    "url": "https://artofproblemsolving.com/wiki/index.php/2022_AMC_12B_Problems/Problem_19",
+    "source": "AMC 12B",
+    "difficulty": "Hard",
+    "isStarred": false,
+    "tags": [
+      "Geometry",
+      "Triangle",
+      "Medians",
+      "Equilateral"
+    ],
+    "statement": "In triangle ABC, the medians AD and BE intersect at G, and triangle AGE is equilateral. The lengths AB = 13, BC = 14, and CA = 15. Find the value of m + n + p if the side length of triangle AGE can be written as (m/n)√p, where m and n are relatively prime positive integers and p is a positive integer not divisible by the square of any prime.",
+    "solutionMetadata": {
+      "kind": "none"
+    }
+  }
+]
 }
