@@ -2,33 +2,70 @@
   "MODULE_ID": "geometry-basics",
   "practice": [
     {
-      "uniqueId": "amc8-2016-14",
-      "name": "Problem 14 (2016 AMC 8)",
-      "url": "https://artofproblemsolving.com/wiki/index.php/2016_AMC_8_Problems/Problem_14",
+      "uniqueId": "amc8-2024-6",
+      "name": "Problem 6 (2024 AMC 8)",
+      "url": "https://artofproblemsolving.com/wiki/index.php/2024_AMC_8_Problems/Problem_6",
       "source": "AMC 8",
       "difficulty": "Easy",
-      "isStarred": true,
+      "isStarred": false,
       "tags": [
-        "Geometry",
-        "Angles"
+        "Geometry Basics",
+        "Arc Length",
+        "Path Comparison"
       ],
-      "statement": "This is a 2016 AMC 8 problem focusing on geometry and angles. See the full problem statement on [AoPS](https://artofproblemsolving.com/wiki/index.php/2016_AMC_8_Problems/Problem_14).",
+      "statement": "Sergei skated around an ice rink, gliding along different paths. The gray lines in the figures below show four of the paths labeled $P$, $Q$, $R$, and $S$. What is the sorted order of the four paths from shortest to longest?",
       "solutionMetadata": {
         "kind": "none"
       }
     },
     {
-      "uniqueId": "amc10-2017a-9",
+      "uniqueId": "amc8-2016-22",
+      "name": "Problem 22 (2016 AMC 8)",
+      "url": "https://artofproblemsolving.com/wiki/index.php?title=2016_AMC_8_Problems/Problem_22",
+      "source": "AMC 8",
+      "difficulty": "Medium",
+      "isStarred": false,
+      "tags": [
+        "Geometry Basics",
+        "Circles",
+        "Angles"
+      ],
+      "statement": "Two congruent circles centered at points $A$ and $B$ each pass through the other circle's center. The line containing both $A$ and $B$ is extended to intersect the circles at points $C$ and $D$. The circles intersect at two points, one of which is $E$. What is the degree measure of $\\angle CED$?",
+      "solutionMetadata": {
+        "kind": "none"
+      }
+    },
+    {
+      "uniqueId": "amc10a-2017-9",
       "name": "Problem 9 (2017 AMC 10A)",
       "url": "https://artofproblemsolving.com/wiki/index.php/2017_AMC_10A_Problems/Problem_9",
       "source": "AMC 10",
-      "difficulty": "Easy",
+      "difficulty": "Medium",
       "isStarred": false,
       "tags": [
-        "Triangles",
-        "Area"
+        "Geometry Basics",
+        "Rate Problems",
+        "Distance"
       ],
-      "statement": "This is a 2017 AMC 10A problem focusing on triangles and area. See the full problem statement on [AoPS](https://artofproblemsolving.com/wiki/index.php/2017_AMC_10A_Problems/Problem_9).",
+      "statement": "Minnie rides on a flat road at $20$ kilometers per hour (kph), downhill at $30$ kph, and uphill at $5$ kph. Penny rides on a flat road at $30$ kph, downhill at $40$ kph, and uphill at $10$ kph. Minnie goes from town $A$ to town $B$, a distance of $10$ km all uphill, then from town $B$ to town $C$, a distance of $15$ km all downhill, and then back to town $A$, a distance of $20$ km on the flat. Penny goes the other way around using the same route. How many more minutes does it take Minnie to complete the $45$-km ride than it takes Penny?",
+      "solutionMetadata": {
+        "kind": "none"
+      }
+    },
+    {
+      "uniqueId": "amc8-2016-14",
+      "name": "Problem 14 (2016 AMC 8)",
+      "url": "https://artofproblemsolving.com/wiki/index.php/2016_AMC_8_Problems/Problem_14",
+      "source": "AMC 8",
+      "difficulty": "Medium",
+      "isStarred": false,
+      "tags": [
+        "Geometry Basics",
+        "Area",
+        "Rectangles",
+        "Triangles"
+      ],
+      "statement": "Rectangle $DEFA$ below is a $3 \\times 4$ rectangle with $DC = CB = BA = 1$. What is the area of the shaded region (the \"bat wings\")?",
       "solutionMetadata": {
         "kind": "none"
       }
