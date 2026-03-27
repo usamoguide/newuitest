@@ -223,25 +223,42 @@ export default function IndexPage({ path }): JSX.Element {
         </div>
       </div>
       {/* End Hero */}
-      {/* Begin Stars System Section */}
-      <div className="relative overflow-hidden bg-gray-50 dark:bg-gradient-to-b dark:from-[#2d1f3d] dark:to-black transition-colors duration-500">
-        <div className="pointer-events-none absolute inset-0 bg-cover bg-center" style={{ backgroundImage: "url('/images/starbg.jpg')" }} />
-        
-        <div className="relative z-10 flex items-center min-h-[400px] -translate-x-1/8">
+      {/* Wave transition: wrapper bg = next section top color, SVG path = hero bottom color */}
+      <div className="overflow-hidden leading-[0] bg-white dark:bg-[#2a1208] pointer-events-none">
+        <svg
+          viewBox="0 0 1200 80"
+          preserveAspectRatio="none"
+          className="w-full h-16 md:h-20 block"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            d="M0,80 C300,80 400,0 600,0 C800,0 900,80 1200,80 L1200,0 L0,0 Z"
+            className="fill-gray-50 dark:fill-[#160f08]"
+          />
+        </svg>
+      </div>
+      <div className="relative bg-gradient-to-b from-white via-orange-100 to-orange-50 dark:bg-gradient-to-b dark:from-[#2a1208] dark:via-[#e85d04]/20 dark:to-[#e85d04]/30 transition-colors duration-500">
+        {/* Stars System Section */}
+        <div className="pt-16 md:pt-24">
           <div className={containerClasses}>
-            <div className="max-w-2xl">
-              <h2 className="text-4xl md:text-5xl font-bold pb-6 text-gray-900 dark:text-yellow-50">
-                ⭐ Earn Stars, Unlock Rewards
-              </h2>
-              <p className="text-lg md:text-xl text-gray-700 dark:text-gray-300 mb-6 leading-relaxed">
-                Earn stars as you progress through USAMO Guide. Get 5 stars for completing each page and 1 star for every problem you solve. Collect stars and redeem them in our shop for exclusive rewards and perks.
-              </p>
+            <h2 className="justify-center items-center mx-auto flex flex-col text-6xl font-bold pb-3 dark:text-orange-50/90">
+              ⭐ Earn Stars, Unlock Rewards
+            </h2>
+            <p className={classNames(subtextClasses, 'text-center mx-auto mt-4')}>
+              Earn stars as you progress through USAMO Guide. Get 5 stars for completing each page and 1 star for every problem you solve. Collect stars and redeem them in our shop for exclusive rewards and perks.
+            </p>
+            <div className="h-12 md:h-20"></div>
+            <div className="flex justify-center">
+              <div className="border-4 border-white rounded-2xl shadow-2xl overflow-hidden max-w-2xl w-full">
+                <img
+                  src="/images/starbg.jpg"
+                  alt="Earn stars and unlock rewards"
+                  className="w-full object-cover block"
+                />
+              </div>
             </div>
           </div>
         </div>
-      </div>
-      {/* End Stars System Section */}
-      <div className="relative bg-gradient-to-b from-white via-orange-100 to-orange-50 dark:bg-gradient-to-b dark:from-[#e85d04]/10 dark:via-[#e85d04]/20 dark:to-[#e85d04]/30 transition-colors duration-500">
         <div className="pointer-events-none absolute inset-0 z-0">
           <div className="absolute inset-0 z-0 [mask-image:radial-gradient(ellipse_at_center,white_20%,transparent_75%)]">
             <svg
@@ -355,7 +372,7 @@ export default function IndexPage({ path }): JSX.Element {
 
       
 
-      <div className="relative bg-gray-100 dark:bg-black">
+      <div className="relative bg-gradient-to-b from-orange-50 to-gray-100 dark:bg-none dark:bg-gradient-to-b dark:[background:linear-gradient(to_bottom,rgba(232,93,4,0.18)_0%,rgba(20,12,5,1)_60%,rgba(15,10,5,1)_100%)]">
         <div className="relative z-10">
           <div className="h-15 md:h-20"></div>
           <div className={containerClasses}>
@@ -394,7 +411,7 @@ export default function IndexPage({ path }): JSX.Element {
       </div>
 
       {/* Begin FAQ */}
-      <div className="relative dark:bg-dark-surface bg-white">
+      <div className="relative bg-white dark:[background:linear-gradient(to_bottom,rgba(15,10,5,1)_0%,rgba(18,12,7,1)_100%)]">
         <div
           className="pointer-events-none absolute inset-0 bg-repeat bg-center dark:opacity-12"
           style={{ backgroundImage: "url('/images/math-doodles.png')" }}
@@ -546,7 +563,7 @@ export default function IndexPage({ path }): JSX.Element {
       </div>
       {/*End FAQ*/}
 
-      <div className="dark:bg-[#0D0D0D]">
+      <div className="dark:[background:linear-gradient(to_bottom,rgba(18,12,7,1)_0%,rgba(13,10,7,1)_100%)]">
         <div className="mx-auto max-w-(--breakpoint-xl) px-4 py-12">
           <p className="dark:text-dark-med-emphasis text-center text-base leading-6 text-gray-400">
             &copy; {new Date().getFullYear()} USAMO Guide.
