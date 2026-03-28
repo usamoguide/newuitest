@@ -15,9 +15,9 @@ export type Chapter = {
 const MODULE_ORDERING: { [key in SectionID]: Chapter[] } = {
   foundations: [
     {
-      name: 'Number Sense',
+      name: 'Number Theory Basics',
       description: 'Fluency with arithmetic and foundational number theory.',
-      items: ['arithmetic-nt-basics'],
+      items: ['arithmetic-nt-basics', 'linear-diophantine-equations'],
     },
     {
       name: 'Algebra Basics',
@@ -123,7 +123,7 @@ const MODULE_ORDERING: { [key in SectionID]: Chapter[] } = {
     },
     {
       name: 'Number Theory',
-      items: ['modular-arithmetic', 'number-theory-intermediate'],
+      items: ['modular-arithmetic', 'number-theory-intermediate', 'chinese-remainder-theorem'],
     },
     {
       name: 'Euclidean Geometry',
