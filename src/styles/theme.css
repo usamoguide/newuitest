@@ -45,7 +45,7 @@
     --select-text: var(--text-primary);
     --select-option-hover: var(--accent-soft);
     --select-option-selected: var(--accent-soft-strong);
-    --heatmap-empty: #e5e7eb;
+    --heatmap-empty: #2c3338;
     --heatmap-1: #fde68a;
     --heatmap-2: #fbbf24;
     --heatmap-3: #f59e0b;
@@ -121,7 +121,7 @@
     --select-text: #f3f4f6;
     --select-option-hover: #1f2937;
     --select-option-selected: #2b3648;
-    --heatmap-empty: #1f2937;
+    --heatmap-empty: #2c3338;
     --heatmap-1: #713f12;
     --heatmap-2: #b45309;
     --heatmap-3: #d97706;

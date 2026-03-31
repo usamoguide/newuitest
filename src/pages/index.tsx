@@ -45,7 +45,7 @@ const whiteButtonClasses =
 const usamoTitleClasses =
   'text-center font-extrabold tracking-tight text-5xl sm:text-6xl md:text-7xl 2xl:text-8xl bg-clip-text text-transparent bg-linear-to-b from-gray-900 to-gray-600 dark:from-white dark:to-red-200';
 const linkTextStyles =
-  'text-blue-600 dark:text-blue-300 transition hover:text-purple-600 dark:hover:text-purple-300';
+  'text-orange-600 dark:text-orange-300 transition hover:text-orange-800 dark:hover:text-orange-100';
 
 export default function IndexPage({ path }): JSX.Element {
   const currentUser = useCurrentUser();
@@ -249,7 +249,7 @@ export default function IndexPage({ path }): JSX.Element {
             </p>
             <div className="h-12 md:h-20"></div>
             <div className="flex justify-center">
-              <div className="border-4 border-white rounded-2xl shadow-2xl overflow-hidden max-w-2xl w-full">
+              <div className="border-4 border-white rounded-2xl shadow-2xl overflow-hidden max-w-2xl w-full transition-all duration-300 hover:scale-[1.02] hover:shadow-[0_0_40px_rgba(251,146,60,0.4)]">
                 <img
                   src="/images/starbg.jpg"
                   alt="Earn stars and unlock rewards"
@@ -291,10 +291,11 @@ export default function IndexPage({ path }): JSX.Element {
           <div className="lg:flex gap-2">
             <Feature
               icon={DatabaseIcon}
-              iconClasses="from-cyan-400 to-sky-500"
+              iconClasses="from-amber-400 to-orange-500"
               title="Curated Resources"
-              blobClasses="bg-sky-200 dark:bg-sky-800 hidden xl:block"
+              blobClasses="bg-orange-200 dark:bg-orange-800 hidden xl:block"
               feature={<ResourcesFeature />}
+              fade="none"
             >
               Learn new topics from a vetted list of high-quality resources. If
               one resource doesn't click, look at another!
@@ -304,10 +305,11 @@ export default function IndexPage({ path }): JSX.Element {
 
             <Feature
               icon={ClipboardListIcon}
-              iconClasses="from-purple-400 to-indigo-500"
+              iconClasses="from-orange-400 to-red-500"
               title="Extensive Problemsets"
-              blobClasses="bg-purple-300 dark:bg-purple-800"
+              blobClasses="bg-orange-200 dark:bg-orange-900"
               feature={<ProblemsetsFeature />}
+              fade="none"
             >
               Practice each topic with extensive problemsets and solutions
               covering a wide range of difficulties.
@@ -331,7 +333,7 @@ export default function IndexPage({ path }): JSX.Element {
 
             <Feature
               icon={ChatAlt2Icon}
-              iconClasses="from-green-400 to-cyan-500"
+              iconClasses="from-green-400 to-emerald-500"
               title="Help when you need it"
               blobClasses="bg-green-200 dark:bg-green-800"
               className='col-span-5 md:col-start-4 md:col-end-6'
@@ -436,7 +438,7 @@ export default function IndexPage({ path }): JSX.Element {
                         href="https://www.maa.org/math-competitions"
                         target="_blank"
                         rel="noreferrer"
-                        className="text-blue-600 underline dark:text-blue-400"
+                        className="text-orange-600 underline dark:text-orange-400"
                       >
                         MAA competitions page
                       </a>
@@ -467,7 +469,7 @@ export default function IndexPage({ path }): JSX.Element {
                       "Contact Us" button. Alternatively, email us at{' '}
                       <a
                         href="mailto:contact@usamoguide.com"
-                        className="text-blue-600 underline dark:text-blue-400"
+                        className="text-orange-600 underline dark:text-orange-400"
                       >
                         contact@usamoguide.com
                       </a>
@@ -510,7 +512,7 @@ export default function IndexPage({ path }): JSX.Element {
                         href="https://artofproblemsolving.com/community"
                         target="_blank"
                         rel="noreferrer"
-                        className="text-blue-600 underline dark:text-blue-400"
+                        className="text-orange-600 underline dark:text-orange-400"
                       >
                         AoPS community
                       </a>{' '}
@@ -529,7 +531,7 @@ export default function IndexPage({ path }): JSX.Element {
                         href="https://github.com/usamoguide/usamo-guide"
                         target="_blank"
                         rel="noreferrer"
-                        className="text-blue-600 underline dark:text-blue-400"
+                        className="text-orange-600 underline dark:text-orange-400"
                       >
                         GitHub repository
                       </a>
@@ -548,7 +550,7 @@ export default function IndexPage({ path }): JSX.Element {
                         href="https://github.com/usamoguide/usamo-guide"
                         target="_blank"
                         rel="noreferrer"
-                        className="text-blue-600 underline dark:text-blue-400"
+                        className="text-orange-600 underline dark:text-orange-400"
                       >
                         GitHub Repository
                       </a>
