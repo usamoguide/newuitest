@@ -55,26 +55,25 @@ export function ActivityHeatmap({
       <div className="bg-white px-4 py-5 shadow-sm transition sm:rounded-lg sm:p-6 dark:bg-gray-800">
         <div className="grid gap-y-4 lg:grid-cols-3 lg:gap-x-6 lg:gap-y-0">
           <div className="col-span-2">
-            <div className="pt-2 pb-3">
+            <div className="overflow-x-auto pt-2 pb-3 px-1">
               <CalendarHeatmap
                 startDate={startDate}
                 endDate={normalizedEndDate}
                 values={heatmapValues}
-                gutterSize={2}
+                gutterSize={4}
                 onMouseOver={(_ev, value) => {
                   if (!value) setActiveDate(null);
                   else setActiveDate(value.date);
                 }}
                 transformDayElement={(element: React.ReactElement) => {
-                  const size = 12;
-                  const offset = 0;
+                  const size = 13;
                   return React.cloneElement(element, {
                     width: size,
                     height: size,
-                    x: element.props.x + offset,
-                    y: element.props.y + offset,
-                    rx: 2,
-                    ry: 2,
+                    x: element.props.x,
+                    y: element.props.y,
+                    rx: 0,
+                    ry: 0,
                   });
                 }}
                 classForValue={value => {

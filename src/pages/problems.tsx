@@ -141,7 +141,7 @@ export default function ProblemsPage(props: PageProps<DataProps>) {
                   <h1 className="dark:text-dark-high-emphasis mb-6 text-center text-3xl font-bold text-gray-900 sm:text-5xl dark:text-white">
                     Problems
                   </h1>
-                  <div className="mx-auto max-w-md rounded-xl bg-white/60 p-3 dark:bg-slate-900/50">
+                  <div className="mx-auto max-w-md">
                     <SearchBox />
                   </div>
                 </div>

@@ -45,7 +45,7 @@ const whiteButtonClasses =
 const usamoTitleClasses =
   'text-center font-extrabold tracking-tight text-5xl sm:text-6xl md:text-7xl 2xl:text-8xl bg-clip-text text-transparent bg-linear-to-b from-gray-900 to-gray-600 dark:from-white dark:to-red-200';
 const linkTextStyles =
-  'text-blue-600 dark:text-blue-300 transition hover:text-purple-600 dark:hover:text-purple-300';
+  'text-orange-600 dark:text-orange-300 transition hover:text-orange-800 dark:hover:text-orange-100';
 
 export default function IndexPage({ path }): JSX.Element {
   const currentUser = useCurrentUser();
@@ -223,25 +223,42 @@ export default function IndexPage({ path }): JSX.Element {
         </div>
       </div>
       {/* End Hero */}
-      {/* Begin Stars System Section */}
-      <div className="relative overflow-hidden bg-gray-50 dark:bg-gradient-to-b dark:from-[#2d1f3d] dark:to-black transition-colors duration-500">
-        <div className="pointer-events-none absolute inset-0 bg-cover bg-center" style={{ backgroundImage: "url('/images/starbg.jpg')" }} />
-        
-        <div className="relative z-10 flex items-center min-h-[400px] -translate-x-1/8">
+      {/* Wave transition: wrapper bg = next section top color, SVG path = hero bottom color */}
+      <div className="overflow-hidden leading-[0] bg-white dark:bg-[#2a1208] pointer-events-none">
+        <svg
+          viewBox="0 0 1200 80"
+          preserveAspectRatio="none"
+          className="w-full h-16 md:h-20 block"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            d="M0,80 C300,80 400,0 600,0 C800,0 900,80 1200,80 L1200,0 L0,0 Z"
+            className="fill-gray-50 dark:fill-[#160f08]"
+          />
+        </svg>
+      </div>
+      <div className="relative bg-gradient-to-b from-white via-orange-100 to-orange-50 dark:bg-gradient-to-b dark:from-[#2a1208] dark:via-[#e85d04]/20 dark:to-[#e85d04]/30 transition-colors duration-500">
+        {/* Stars System Section */}
+        <div className="pt-16 md:pt-24">
           <div className={containerClasses}>
-            <div className="max-w-2xl">
-              <h2 className="text-4xl md:text-5xl font-bold pb-6 text-gray-900 dark:text-yellow-50">
-                ⭐ Earn Stars, Unlock Rewards
-              </h2>
-              <p className="text-lg md:text-xl text-gray-700 dark:text-gray-300 mb-6 leading-relaxed">
-                Earn stars as you progress through USAMO Guide. Get 5 stars for completing each page and 1 star for every problem you solve. Collect stars and redeem them in our shop for exclusive rewards and perks.
-              </p>
+            <h2 className="justify-center items-center mx-auto flex flex-col text-6xl font-bold pb-3 dark:text-orange-50/90">
+              ⭐ Earn Stars, Unlock Rewards
+            </h2>
+            <p className={classNames(subtextClasses, 'text-center mx-auto mt-4')}>
+              Earn stars as you progress through USAMO Guide. Get 5 stars for completing each page and 1 star for every problem you solve. Collect stars and redeem them in our shop for exclusive rewards and perks.
+            </p>
+            <div className="h-12 md:h-20"></div>
+            <div className="flex justify-center">
+              <div className="border-4 border-white rounded-2xl shadow-2xl overflow-hidden max-w-2xl w-full transition-all duration-300 hover:scale-[1.02] hover:shadow-[0_0_40px_rgba(251,146,60,0.4)]">
+                <img
+                  src="/images/starbg.jpg"
+                  alt="Earn stars and unlock rewards"
+                  className="w-full object-cover block"
+                />
+              </div>
             </div>
           </div>
         </div>
-      </div>
-      {/* End Stars System Section */}
-      <div className="relative bg-gradient-to-b from-white via-orange-100 to-orange-50 dark:bg-gradient-to-b dark:from-[#e85d04]/10 dark:via-[#e85d04]/20 dark:to-[#e85d04]/30 transition-colors duration-500">
         <div className="pointer-events-none absolute inset-0 z-0">
           <div className="absolute inset-0 z-0 [mask-image:radial-gradient(ellipse_at_center,white_20%,transparent_75%)]">
             <svg
@@ -274,10 +291,11 @@ export default function IndexPage({ path }): JSX.Element {
           <div className="lg:flex gap-2">
             <Feature
               icon={DatabaseIcon}
-              iconClasses="from-cyan-400 to-sky-500"
+              iconClasses="from-amber-400 to-orange-500"
               title="Curated Resources"
-              blobClasses="bg-sky-200 dark:bg-sky-800 hidden xl:block"
+              blobClasses="bg-orange-200 dark:bg-orange-800 hidden xl:block"
               feature={<ResourcesFeature />}
+              fade="none"
             >
               Learn new topics from a vetted list of high-quality resources. If
               one resource doesn't click, look at another!
@@ -287,10 +305,11 @@ export default function IndexPage({ path }): JSX.Element {
 
             <Feature
               icon={ClipboardListIcon}
-              iconClasses="from-purple-400 to-indigo-500"
+              iconClasses="from-orange-400 to-red-500"
               title="Extensive Problemsets"
-              blobClasses="bg-purple-300 dark:bg-purple-800"
+              blobClasses="bg-orange-200 dark:bg-orange-900"
               feature={<ProblemsetsFeature />}
+              fade="none"
             >
               Practice each topic with extensive problemsets and solutions
               covering a wide range of difficulties.
@@ -314,7 +333,7 @@ export default function IndexPage({ path }): JSX.Element {
 
             <Feature
               icon={ChatAlt2Icon}
-              iconClasses="from-green-400 to-cyan-500"
+              iconClasses="from-green-400 to-emerald-500"
               title="Help when you need it"
               blobClasses="bg-green-200 dark:bg-green-800"
               className='col-span-5 md:col-start-4 md:col-end-6'
@@ -355,7 +374,7 @@ export default function IndexPage({ path }): JSX.Element {
 
       
 
-      <div className="relative bg-gray-100 dark:bg-black">
+      <div className="relative bg-gradient-to-b from-orange-50 to-gray-100 dark:bg-none dark:bg-gradient-to-b dark:[background:linear-gradient(to_bottom,rgba(232,93,4,0.18)_0%,rgba(20,12,5,1)_60%,rgba(15,10,5,1)_100%)]">
         <div className="relative z-10">
           <div className="h-15 md:h-20"></div>
           <div className={containerClasses}>
@@ -394,7 +413,7 @@ export default function IndexPage({ path }): JSX.Element {
       </div>
 
       {/* Begin FAQ */}
-      <div className="relative dark:bg-dark-surface bg-white">
+      <div className="relative bg-white dark:[background:linear-gradient(to_bottom,rgba(15,10,5,1)_0%,rgba(18,12,7,1)_100%)]">
         <div
           className="pointer-events-none absolute inset-0 bg-repeat bg-center dark:opacity-12"
           style={{ backgroundImage: "url('/images/math-doodles.png')" }}
@@ -419,7 +438,7 @@ export default function IndexPage({ path }): JSX.Element {
                         href="https://www.maa.org/math-competitions"
                         target="_blank"
                         rel="noreferrer"
-                        className="text-blue-600 underline dark:text-blue-400"
+                        className="text-orange-600 underline dark:text-orange-400"
                       >
                         MAA competitions page
                       </a>
@@ -450,7 +469,7 @@ export default function IndexPage({ path }): JSX.Element {
                       "Contact Us" button. Alternatively, email us at{' '}
                       <a
                         href="mailto:contact@usamoguide.com"
-                        className="text-blue-600 underline dark:text-blue-400"
+                        className="text-orange-600 underline dark:text-orange-400"
                       >
                         contact@usamoguide.com
                       </a>
@@ -493,7 +512,7 @@ export default function IndexPage({ path }): JSX.Element {
                         href="https://artofproblemsolving.com/community"
                         target="_blank"
                         rel="noreferrer"
-                        className="text-blue-600 underline dark:text-blue-400"
+                        className="text-orange-600 underline dark:text-orange-400"
                       >
                         AoPS community
                       </a>{' '}
@@ -512,7 +531,7 @@ export default function IndexPage({ path }): JSX.Element {
                         href="https://github.com/usamoguide/usamo-guide"
                         target="_blank"
                         rel="noreferrer"
-                        className="text-blue-600 underline dark:text-blue-400"
+                        className="text-orange-600 underline dark:text-orange-400"
                       >
                         GitHub repository
                       </a>
@@ -531,7 +550,7 @@ export default function IndexPage({ path }): JSX.Element {
                         href="https://github.com/usamoguide/usamo-guide"
                         target="_blank"
                         rel="noreferrer"
-                        className="text-blue-600 underline dark:text-blue-400"
+                        className="text-orange-600 underline dark:text-orange-400"
                       >
                         GitHub Repository
                       </a>
@@ -546,7 +565,7 @@ export default function IndexPage({ path }): JSX.Element {
       </div>
       {/*End FAQ*/}
 
-      <div className="dark:bg-[#0D0D0D]">
+      <div className="dark:[background:linear-gradient(to_bottom,rgba(18,12,7,1)_0%,rgba(13,10,7,1)_100%)]">
         <div className="mx-auto max-w-(--breakpoint-xl) px-4 py-12">
           <p className="dark:text-dark-med-emphasis text-center text-base leading-6 text-gray-400">
             &copy; {new Date().getFullYear()} USAMO Guide.
