@@ -34,20 +34,13 @@ const MODULE_ORDERING: { [key in SectionID]: Chapter[] } = {
         'substitution-techniques',
         'sfft-factoring',
         'cubic-factorizations',
-        'higher-power-factorizations',
-        'sophie-germain-identity',
       ],
     },
     {
       name: 'Algebra Tools',
       items: [
         'vieta-formulas',
-        'newton-sums',
-        'symmetric-polynomials',
         'polynomial-manipulations',
-        'symmetric-identity',
-        'vieta-root-jumping',
-        'functional-equations',
       ],
     },
     {
@@ -56,7 +49,6 @@ const MODULE_ORDERING: { [key in SectionID]: Chapter[] } = {
         'mean-median-mode-harmonic',
         'arithmetic-sequences',
         'geometric-sequences',
-        'sum-formulas-powers',
         'telescoping',
       ],
     },
@@ -92,7 +84,7 @@ const MODULE_ORDERING: { [key in SectionID]: Chapter[] } = {
         'law-of-sines',
         'law-of-cosines',
         'circle-angles',
-        'special-quadrilaterals',
+        'special-quadrilaterals'
       ],
     },
     {
@@ -111,11 +103,21 @@ const MODULE_ORDERING: { [key in SectionID]: Chapter[] } = {
   intermediate: [
     {
       name: 'Advanced Algebra',
-      items: ['advanced-algebra'],
+      items: ['advanced-algebra',
+        'higher-power-factorizations',
+        'sophie-germain-identity',
+        'newton-sums',
+        'symmetric-polynomials',
+        'symmetric-identity',
+        'vieta-root-jumping',
+        'sum-formulas-powers',
+      ],
     },
     {
       name: 'Functional Equations',
-      items: ['functional-equations-intro'],
+      items: [
+        'functional-equations',
+      ],
     },
     {
       name: 'Counting & Casework',
