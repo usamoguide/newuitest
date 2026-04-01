@@ -60,7 +60,7 @@
     "difficulty": "Medium",
     "isStarred": false,
     "tags": [],
-    "statement": "Problem statement available at the Art of Problem Solving wiki.",
+    "statement": "The quadratic equation $x^2+mx+n$ has roots twice those of $x^2+px+m$, and none of $m,n,$ and $p$ is zero. What is the value of $n/p$?",
     "solutionMetadata": {
       "kind": "none"
     }
@@ -107,7 +107,7 @@
     "difficulty": "Medium",
     "isStarred": false,
     "tags": [],
-    "statement": "Problem statement available at the Art of Problem Solving wiki.",
+    "statement": "Let $a$, $b$, and $c$ be three distinct one-digit numbers. What is the maximum value of the sum of the roots of the equation $(x-a)(x-b)+(x-b)(x-c)=0$ ?",
     "solutionMetadata": {
       "kind": "none"
     }
