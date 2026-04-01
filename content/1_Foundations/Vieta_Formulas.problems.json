@@ -47,7 +47,7 @@
       "Quadratic",
       "Vieta's Formulas"
     ],
-    "statement": "What is the sum of the reciprocals of the roots of the equation $\frac{2003}{2004}x+1+\frac{1}{x}=0$?",
+    "statement": "What is the sum of the reciprocals of the roots of the equation $\\frac{2003}{2004}x+1+\\frac{1}{x}=0$?",
     "solutionMetadata": {
       "kind": "none"
     }
