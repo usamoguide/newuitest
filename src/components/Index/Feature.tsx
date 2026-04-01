@@ -2,7 +2,9 @@ import classNames from 'classnames';
 import React from 'react';
 
 export const Feature = ({
-  icon: Icon,
+  iconSrc,
+  iconFallbackSrc,
+  iconAlt,
   iconClasses,
   title,
   blobClasses,
@@ -12,7 +14,9 @@ export const Feature = ({
   children,
   className,
 }: {
-  icon: React.ElementType;
+  iconSrc: string;
+  iconFallbackSrc?: string;
+  iconAlt: string;
   iconClasses: string;
   title: string;
   blobClasses: string;
@@ -22,6 +26,12 @@ export const Feature = ({
   children: React.ReactNode;
   className?: string;
 }): JSX.Element => {
+  const [currentIconSrc, setCurrentIconSrc] = React.useState(iconSrc);
+
+  React.useEffect(() => {
+    setCurrentIconSrc(iconSrc);
+  }, [iconSrc]);
+
   return (
     <div
       className={classNames(
@@ -43,7 +53,17 @@ export const Feature = ({
               iconClasses
             )}
           >
-            <Icon className="h-6 w-6" />
+            <img
+              src={currentIconSrc}
+              alt={iconAlt}
+              className="h-6 w-6"
+              loading="lazy"
+              onError={() => {
+                if (iconFallbackSrc && currentIconSrc !== iconFallbackSrc) {
+                  setCurrentIconSrc(iconFallbackSrc);
+                }
+              }}
+            />
           </div>
         </div>
         <h3 className="text-xl font-bold text-gray-900 md:text-3xl dark:text-gray-100">

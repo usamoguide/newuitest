@@ -22,9 +22,19 @@ export default function Template(props): JSX.Element {
   const module = React.useMemo(() => graphqlToModuleInfo(xdm), [xdm]);
   const isLoaded = useIsUserDataLoaded();
   const currentUser = useCurrentUser();
+  const isDevelopmentSection = module.section !== 'foundations';
   const [isAccessModalDismissed, setIsAccessModalDismissed] = React.useState(false);
+  const [isDevModalDismissed, setIsDevModalDismissed] = React.useState(false);
   const isContentLocked = !currentUser;
-  const showContentAccessModal = isLoaded && isContentLocked && !isAccessModalDismissed;
+  const showContentAccessModal =
+    isLoaded && !isDevelopmentSection && isContentLocked && !isAccessModalDismissed;
+  const showDevelopmentModal = isLoaded && isDevelopmentSection && !isDevModalDismissed;
+
+  useEffect(() => {
+    // Modal dismissal should reset on page navigation/module change.
+    setIsAccessModalDismissed(false);
+    setIsDevModalDismissed(false);
+  }, [module.id]);
 
   useEffect(() => {
     // source: https://miguelpiedrafita.com/snippets/scrollToHash
@@ -95,7 +105,13 @@ export default function Template(props): JSX.Element {
           </svg>
         </div>
 
-        <div className={isContentLocked ? 'pointer-events-none select-none blur-[4px]' : ''}>
+        <div
+          className={
+            showContentAccessModal || showDevelopmentModal
+              ? 'pointer-events-none select-none blur-[4px]'
+              : ''
+          }
+        >
           <ConfettiProvider>
             <MarkdownProblemListsProvider
               value={moduleProblemLists?.problemLists || []}
@@ -115,7 +131,16 @@ export default function Template(props): JSX.Element {
         sectionLabel={SECTION_LABELS[module.section]}
         onClose={() => {
           setIsAccessModalDismissed(true);
-          navigate(`/${module.section}`);
+        }}
+      />
+      <ContentAccessModal
+        isOpen={showDevelopmentModal}
+        mode="development"
+        sectionLabel={SECTION_LABELS[module.section]}
+        primaryActionLabel="Go to Dashboard"
+        onPrimaryAction={() => navigate('/dashboard')}
+        onClose={() => {
+          setIsDevModalDismissed(true);
         }}
       />
     </Layout>

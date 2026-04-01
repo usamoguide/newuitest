@@ -77,6 +77,8 @@ export default function SyllabusPage({
   division,
   path,
 }: SyllabusPageProps) {
+  const isFoundations = division === 'foundations';
+
   const allModules = data.modules.nodes.reduce(
     (acc, cur) => {
       acc[cur.frontmatter.id] = cur;
@@ -169,6 +171,14 @@ export default function SyllabusPage({
                 {SECTION_DESCRIPTION[division]}
               </p>
 
+              {!isFoundations && (
+                <div className="mx-auto mb-8 max-w-4xl rounded-2xl border border-amber-200/80 bg-amber-50/90 px-6 py-4 text-center shadow-sm dark:border-amber-500/40 dark:bg-amber-900/20">
+                  <p className="text-sm font-semibold text-amber-900 dark:text-amber-100 sm:text-base">
+                    This section is currently under development. The content you see here is filler for now.
+                  </p>
+                </div>
+              )}
+
               <div className="mb-8 flex flex-wrap items-center justify-center gap-4">
                 <Link
                   to="/dashboard"
@@ -239,22 +249,22 @@ export default function SyllabusPage({
                   {category.items
                     .filter((x): x is NonNullable<typeof x> => Boolean(x))
                     .map(item => (
-                    <ModuleLink
-                      key={item.frontmatter.id}
-                      link={
-                        new ModuleLinkInfo(
-                          item.frontmatter.id,
-                          division,
-                          item.frontmatter.title,
-                          item.frontmatter.description,
-                          item.frontmatter.frequency as ModuleFrequency,
-                          item.isIncomplete,
-                          [],
-                          item.fields?.gitAuthorTime
-                        )
-                      }
-                    />
-                  ))}
+                      <ModuleLink
+                        key={item.frontmatter.id}
+                        link={
+                          new ModuleLinkInfo(
+                            item.frontmatter.id,
+                            division,
+                            item.frontmatter.title,
+                            item.frontmatter.description,
+                            item.frontmatter.frequency as ModuleFrequency,
+                            item.isIncomplete,
+                            [],
+                            item.fields?.gitAuthorTime
+                          )
+                        }
+                      />
+                    ))}
                 </div>
               </div>
             ))}

@@ -62,10 +62,10 @@ export default function ProblemsPage(props: PageProps<DataProps>) {
       isMulti: true,
       items: (
         [
-          ['Foundations', SECTIONS.foundations],
-          ['Intermediate', SECTIONS.intermediate],
-          ['Advanced', SECTIONS.advanced],
-          ['USAMO Prep', SECTIONS.usamo],
+          ['Foundations (AMC 8)', SECTIONS.foundations],
+          ['Intermediate (AMC 10-12)', SECTIONS.intermediate],
+          ['Advanced (AIME)', SECTIONS.advanced],
+          ['Olympiad (USA(J)MO)', SECTIONS.usamo],
         ] as unknown as [string, Chapter[]][]
       ).map(([section, chapters]) => ({
         label: section,

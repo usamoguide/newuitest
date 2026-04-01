@@ -13,12 +13,18 @@ export interface ContentAccessModalProps {
   isOpen: boolean;
   onClose: () => void;
   sectionLabel?: string;
+  mode?: 'auth' | 'development';
+  primaryActionLabel?: string;
+  onPrimaryAction?: () => void;
 }
 
 export const ContentAccessModal: React.FC<ContentAccessModalProps> = ({
   isOpen,
   onClose,
   sectionLabel,
+  mode = 'auth',
+  primaryActionLabel = 'Close',
+  onPrimaryAction,
 }) => {
   const [isSigningIn, setIsSigningIn] = React.useState(false);
   const [error, setError] = React.useState<any>(null);
@@ -120,18 +126,35 @@ export const ContentAccessModal: React.FC<ContentAccessModalProps> = ({
                   as="h3"
                   className="text-lg leading-6 font-medium text-gray-900 dark:text-gray-200"
                 >
-                  Sign up to access this content for FREE
+                  {mode === 'development'
+                    ? 'Under Development'
+                    : 'Sign up to access this content for FREE'}
                 </DialogTitle>
                 <div className="mt-2">
                   <p className="text-sm text-gray-500 dark:text-gray-400">
-                    {sectionLabel
-                      ? `This ${sectionLabel} content is available for free members. Create your account or sign in to continue.`
-                      : 'This content is available for free members. Create your account or sign in to continue.'}
+                    {mode === 'development'
+                      ? sectionLabel
+                        ? `The ${sectionLabel} content you are seeing right now is filler and still under development.`
+                        : 'This content is filler and still under development.'
+                      : sectionLabel
+                        ? `This ${sectionLabel} content is available for free members. Create your account or sign in to continue.`
+                        : 'This content is available for free members. Create your account or sign in to continue.'}
                   </p>
                 </div>
               </div>
             </div>
-            <div className="mt-5 sm:mt-6">
+            {mode === 'development' ? (
+              <div className="mt-5 sm:mt-6">
+                <button
+                  type="button"
+                  className="btn"
+                  onClick={() => (onPrimaryAction ? onPrimaryAction() : onClose())}
+                >
+                  {primaryActionLabel}
+                </button>
+              </div>
+            ) : (
+              <div className="mt-5 sm:mt-6">
               <div className="flex flex-col space-y-2 sm:flex-row sm:items-center sm:space-y-0 sm:space-x-4">
                 <button
                   type="button"
@@ -256,7 +279,8 @@ export const ContentAccessModal: React.FC<ContentAccessModalProps> = ({
                   </p>
                 </div>
               )}
-            </div>
+              </div>
+            )}
           </DialogPanel>
         </div>
       </div>

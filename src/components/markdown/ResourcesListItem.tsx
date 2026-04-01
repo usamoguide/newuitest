@@ -14,6 +14,31 @@ export default function ResourcesListItem({
 }: {
   resource: ResourceInfo;
 }): JSX.Element {
+  const enforceAopsNewTab = (node: React.ReactNode): React.ReactNode => {
+    if (!React.isValidElement(node)) return node;
+
+    const children = React.Children.map(node.props.children, child =>
+      enforceAopsNewTab(child)
+    );
+
+    if (node.type === 'a') {
+      const href = String(node.props.href ?? '');
+      if (href.includes('artofproblemsolving.com')) {
+        return React.cloneElement(node as React.ReactElement<any>, {
+          ...node.props,
+          target: '_blank',
+          rel: 'noopener noreferrer',
+          children,
+        });
+      }
+    }
+
+    return React.cloneElement(node as React.ReactElement<any>, {
+      ...node.props,
+      children,
+    });
+  };
+
   const darkMode = useDarkMode();
   const id = `resource-${encodeURIComponent(resource.url!)}`;
 
@@ -69,7 +94,7 @@ export default function ResourcesListItem({
   );
   const childrenCol = (
     <ListTableCell className="dark:text-dark-med-emphasis no-y-margin w-full text-gray-500">
-      {resource.children}
+      {React.Children.map(resource.children, child => enforceAopsNewTab(child))}
     </ListTableCell>
   );
 

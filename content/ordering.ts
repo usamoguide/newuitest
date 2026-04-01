@@ -266,10 +266,10 @@ export const SECTIONS: SectionID[] = Object.keys(
   MODULE_ORDERING
 ) as SectionID[];
 export const SECTION_LABELS: { [key in SectionID]: string } = {
-  foundations: 'Foundations',
-  intermediate: 'Intermediate',
-  advanced: 'Advanced',
-  usamo: 'USAMO Prep',
+  foundations: 'Foundations (AMC 8)',
+  intermediate: 'Intermediate (AMC 10-12)',
+  advanced: 'Advanced (AIME)',
+  usamo: 'Olympiad (USA(J)MO)',
 } as const;
 export const SECTION_SEO_DESCRIPTION: { [key in SectionID]: string } = {
   foundations:
@@ -282,10 +282,10 @@ export const SECTION_SEO_DESCRIPTION: { [key in SectionID]: string } = {
     'USAMO preparation: proof writing, induction, extremal arguments, olympiad number theory and geometry, and contest strategy.',
 };
 export const SECTION_SEO_TITLES: { [key in SectionID]: string } = {
-  foundations: 'AMC Foundations',
-  intermediate: 'AMC 10/12 Intermediate Topics',
-  advanced: 'AIME Advanced Topics',
-  usamo: 'USAMO Preparation',
+  foundations: 'Foundations (AMC 8)',
+  intermediate: 'Intermediate (AMC 10-12)',
+  advanced: 'Advanced (AIME)',
+  usamo: 'Olympiad (USA(J)MO)',
 };
 
 const moduleIDToSectionMap: { [key: string]: SectionID } = {};

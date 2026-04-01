@@ -1,15 +1,4 @@
 import { useLocation } from '@gatsbyjs/reach-router';
-import {
-  AcademicCapIcon,
-  ChartBarIcon,
-  ChatAlt2Icon,
-  ClipboardListIcon,
-  CogIcon,
-  DatabaseIcon,
-  LightningBoltIcon,
-  TerminalIcon,
-  UserGroupIcon,
-} from '@heroicons/react/outline';
 import classNames from 'classnames';
 import { Link, navigate } from 'gatsby';
 import { StaticImage } from 'gatsby-plugin-image';
@@ -139,9 +128,7 @@ export default function IndexPage({ path }): JSX.Element {
 
             <div className="mb-4 flex justify-center">
               <a
-                href="https://www.usamoguide.com/contact-us"
-                target="_blank"
-                rel="noreferrer"
+                href="#"
                 className="inline-flex items-center rounded-full border border-orange-300/80 bg-linear-to-r from-orange-100 to-amber-100 px-6 py-3 text-base font-extrabold tracking-wide text-orange-900 shadow-[0_8px_24px_rgba(251,146,60,0.25)] transition-transform duration-200 hover:-translate-y-0.5 hover:scale-105 dark:border-orange-700/60 dark:from-orange-900/40 dark:to-amber-900/30 dark:text-orange-100"
               >
                 Written by USAMO/JMO qualifiers.
@@ -290,8 +277,10 @@ export default function IndexPage({ path }): JSX.Element {
           <div className="h-12 md:h-20 2xl:h-36"></div>
           <div className="lg:flex gap-2">
             <Feature
-              icon={DatabaseIcon}
-              iconClasses="from-amber-400 to-orange-500"
+              iconSrc="/images/feature-resources.png"
+              iconFallbackSrc="https://i.ibb.co/TD2gjPwB/feature-resources.png"
+              iconAlt="Resources icon"
+              iconClasses="from-black to-black"
               title="Curated Resources"
               blobClasses="bg-orange-200 dark:bg-orange-800 hidden xl:block"
               feature={<ResourcesFeature />}
@@ -309,10 +298,12 @@ export default function IndexPage({ path }): JSX.Element {
             <div className="h-12 md:h-20 2xl:h-36"></div>
 
             <Feature
-              icon={ClipboardListIcon}
-              iconClasses="from-orange-400 to-red-500"
+              iconSrc="/images/feature-problemsets.png"
+              iconFallbackSrc="https://i.ibb.co/S7mV5P3x/feature-problemsets.png"
+              iconAlt="Problemsets icon"
+              iconClasses="from-black to-black"
               title="Extensive Problemsets"
-              blobClasses="bg-orange-200 dark:bg-orange-900"
+              blobClasses="from-black to-black"
               feature={<ProblemsetsFeature />}
               fade="none"
             >
@@ -329,8 +320,10 @@ export default function IndexPage({ path }): JSX.Element {
           <div className="h-6 md:h-10 2xl:h-24"></div>
           <div className='lg:grid grid-cols-5 gap-4'>
             <Feature
-              icon={LightningBoltIcon}
-              iconClasses="from-yellow-400 to-orange-500"
+              iconSrc="/images/feature-progress.png"
+              iconFallbackSrc="https://i.ibb.co/hJbCbhn9/feature-progress.png"
+              iconAlt="Progress tracking icon"
+              iconClasses="from-black to-black"
               title="Progress Tracking"
               blobClasses="bg-orange-200 dark:bg-orange-800"
               feature={<ProgressTrackingFeature />}
@@ -347,8 +340,10 @@ export default function IndexPage({ path }): JSX.Element {
             </Feature>
 
             <Feature
-              icon={ChatAlt2Icon}
-              iconClasses="from-green-400 to-emerald-500"
+              iconSrc="/images/feature-community.png"
+              iconFallbackSrc="https://i.ibb.co/gLmZWq6n/feature-community.png"
+              iconAlt="Community help icon"
+              iconClasses="from-black to-black"
               title="Help when you need it"
               blobClasses="bg-green-200 dark:bg-green-800"
               className='col-span-5 md:col-start-4 md:col-end-6'

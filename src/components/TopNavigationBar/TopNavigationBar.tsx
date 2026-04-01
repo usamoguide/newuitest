@@ -88,25 +88,25 @@ export default function TopNavigationBar({
 
   const solutions = [
     {
-      name: 'Foundations',
+      name: 'Foundations (AMC 8)',
       href: '/foundations',
       icon: BookmarkIcon,
       key: 'foundations',
     },
     {
-      name: 'Intermediate',
+      name: 'Intermediate (AMC 10-12)',
       href: '/intermediate',
       icon: BookmarkIcon,
       key: 'intermediate',
     },
     {
-      name: 'Advanced',
+      name: 'Advanced (AIME)',
       href: '/advanced',
       icon: BookmarkIcon,
       key: 'advanced',
     },
     {
-      name: 'USAMO Prep',
+      name: 'Olympiad (USA(J)MO)',
       href: '/usamo',
       icon: BookmarkIcon,
       key: 'usamo',
