@@ -157,61 +157,6 @@
       }
     },
     {
-      "uniqueId": "ajhsme-1991-9",
-      "name": "Problem 9 (1991 AJHSME)",
-      "url": "https://artofproblemsolving.com/wiki/index.php?title=1991_AJHSME_Problems/Problem_9",
-      "source": "AJHSME",
-      "difficulty": "Easy",
-      "isStarred": false,
-      "tags": [
-        "Divisibility",
-        "Venn Diagrams"
-      ],
-      "statement": "How many whole numbers from $1$ through $46$ are divisible by either $3$ or $5$ or both?",
-      "interaction": {
-        "type": "mcq",
-        "choices": [
-          "$18$",
-          "$21$",
-          "$24$",
-          "$25$",
-          "$27$"
-        ],
-        "correctIndex": 1
-      },
-      "solutionMetadata": {
-        "kind": "none"
-      }
-    },
-    {
-      "uniqueId": "ajhsme-1991-23",
-      "name": "Problem 23 (1991 AJHSME)",
-      "url": "https://artofproblemsolving.com/wiki/index.php?title=1991_AJHSME_Problems/Problem_23",
-      "source": "AJHSME",
-      "difficulty": "Hard",
-      "isStarred": false,
-      "tags": [
-        "Set Theory",
-        "Venn Diagrams",
-        "Word Problems"
-      ],
-      "statement": "The Pythagoras High School band has $100$ female and $80$ male members. The Pythagoras High School orchestra has $80$ female and $100$ male members. There are $60$ females who are members in both band and orchestra. Altogether, there are $230$ students who are in either band or orchestra or both. The number of males in the band who are NOT in the orchestra is",
-      "interaction": {
-        "type": "mcq",
-        "choices": [
-          "$10$",
-          "$20$",
-          "$30$",
-          "$50$",
-          "$70$"
-        ],
-        "correctIndex": 0
-      },
-      "solutionMetadata": {
-        "kind": "none"
-      }
-    },
-    {
       "uniqueId": "amc8-1999-9",
       "name": "Problem 9 (1999 AMC 8)",
       "url": "https://artofproblemsolving.com/wiki/index.php?title=1999_AMC_8_Problems/Problem_9",

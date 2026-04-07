@@ -68,33 +68,6 @@
       }
     },
     {
-      "uniqueId": "ajhsme-1990-24",
-      "name": "Problem 24 (1990 AJHSME)",
-      "url": "https://artofproblemsolving.com/wiki/index.php?title=1990_AJHSME_Problems/Problem_24",
-      "source": "AJHSME",
-      "difficulty": "Easy",
-      "isStarred": false,
-      "tags": [
-        "Substitution",
-        "Visual Algebra"
-      ],
-      "statement": "Three $\\triangle$'s and a $\\bigcirc$ will balance nine $\\square$'s. One $\\triangle$ will balance a $\\square$ and a $\\bigcirc$. How many $\\square$'s will balance the two $\\bigcirc$'s in this balance?\n\n[See figure in original PDF]",
-      "interaction": {
-        "type": "mcq",
-        "choices": [
-          "$1$",
-          "$2$",
-          "$3$",
-          "$4$",
-          "$5$"
-        ],
-        "correctIndex": 2
-      },
-      "solutionMetadata": {
-        "kind": "none"
-      }
-    },
-    {
       "uniqueId": "amc8-2002-17",
       "name": "Problem 17 (2002 AMC 8)",
       "url": "https://artofproblemsolving.com/wiki/index.php?title=2002_AMC_8_Problems/Problem_17",

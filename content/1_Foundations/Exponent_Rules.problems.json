@@ -4,7 +4,7 @@
     {
       "uniqueId": "amc8-1999-24",
       "name": "Problem 24 (1999 AMC 8)",
-      "url": "https://artofproblemsolving.com/wiki/index.php/1999_AMC_8_Problems/Problem_24",
+      "url": "https://artofproblemsolving.com/wiki/index.php?title=1999_AMC_8_Problems/Problem_24",
       "source": "AMC 8",
       "difficulty": "Medium",
       "isStarred": true,
@@ -80,86 +80,6 @@
       "isStarred": false,
       "tags": [],
       "statement": "What is the value of $\\frac{(2112 - 2021)^2}{169}$?",
-      "solutionMetadata": {
-        "kind": "none"
-      }
-    },
-    {
-      "uniqueId": "ajhsme-1985-3",
-      "name": "Problem 3 (1985 AJHSME)",
-      "url": "https://artofproblemsolving.com/wiki/index.php?title=1985_AJHSME_Problems/Problem_3",
-      "source": "AJHSME",
-      "difficulty": "Very Easy",
-      "isStarred": false,
-      "tags": [
-        "Powers of 10",
-        "Scientific Notation"
-      ],
-      "statement": "$$\\frac{10^7}{5 \\times 10^4} =$$",
-      "interaction": {
-        "type": "mcq",
-        "choices": [
-          "$.002$",
-          "$.2$",
-          "$20$",
-          "$200$",
-          "$2000$"
-        ],
-        "correctIndex": 3
-      },
-      "solutionMetadata": {
-        "kind": "none"
-      }
-    },
-    {
-      "uniqueId": "ajhsme-1987-19",
-      "name": "Problem 19 (1987 AJHSME)",
-      "url": "https://artofproblemsolving.com/wiki/index.php?title=1987_AJHSME_Problems/Problem_19",
-      "source": "AJHSME",
-      "difficulty": "Easy",
-      "isStarred": false,
-      "tags": [
-        "Repeated Squaring"
-      ],
-      "statement": "A calculator has a squaring key $x^2$ which replaces the current number displayed with its square. For example, if the display is $000003$ and the $x^2$ key is depressed, then the display becomes $000009$. If the display reads $000002$, how many times must you depress the $x^2$ key to produce a displayed number greater than $500$?",
-      "interaction": {
-        "type": "mcq",
-        "choices": [
-          "$4$",
-          "$5$",
-          "$8$",
-          "$9$",
-          "$250$"
-        ],
-        "correctIndex": 0
-      },
-      "solutionMetadata": {
-        "kind": "none"
-      }
-    },
-    {
-      "uniqueId": "ajhsme-1993-7",
-      "name": "Problem 7 (1993 AJHSME)",
-      "url": "https://artofproblemsolving.com/wiki/index.php?title=1993_AJHSME_Problems/Problem_7",
-      "source": "AJHSME",
-      "difficulty": "Very Easy",
-      "isStarred": false,
-      "tags": [
-        "Exponent Arithmetic",
-        "Factoring"
-      ],
-      "statement": "$3^{3} + 3^{3} + 3^{3} =$",
-      "interaction": {
-        "type": "mcq",
-        "choices": [
-          "$3^{4}$",
-          "$9^{3}$",
-          "$3^{9}$",
-          "$27^{3}$",
-          "$3^{27}$"
-        ],
-        "correctIndex": 0
-      },
       "solutionMetadata": {
         "kind": "none"
       }

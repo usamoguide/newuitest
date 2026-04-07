@@ -39,22 +39,6 @@
       }
     },
     {
-      "uniqueId": "amc8-2002-16",
-      "name": "Problem 16 (2002 AMC 8)",
-      "url": "https://artofproblemsolving.com/wiki/index.php/2002_AMC_8_Problems/Problem_16",
-      "source": "AMC 8",
-      "difficulty": "Medium",
-      "isStarred": false,
-      "tags": [
-        "Geometry",
-        "Special Triangles"
-      ],
-      "statement": "Problem statement available at the Art of Problem Solving wiki.",
-      "solutionMetadata": {
-        "kind": "none"
-      }
-    },
-    {
       "uniqueId": "amc8-2005-9",
       "name": "Problem 9 (2005 AMC 8)",
       "url": "https://artofproblemsolving.com/wiki/index.php?title=2005_AMC_8_Problems/Problem_9",

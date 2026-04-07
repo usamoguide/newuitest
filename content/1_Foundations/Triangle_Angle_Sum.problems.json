@@ -106,59 +106,6 @@
       }
     },
     {
-      "uniqueId": "ajhsme-1996-24",
-      "name": "Problem 24 (1996 AJHSME)",
-      "url": "https://artofproblemsolving.com/wiki/index.php?title=1996_AJHSME_Problems/Problem_24",
-      "source": "AJHSME",
-      "difficulty": "Normal",
-      "isStarred": false,
-      "tags": [
-        "Angle Bisectors"
-      ],
-      "statement": "The measure of angle $ABC$ is $50^{\\circ}$. $\\overline{AD}$ bisects angle $BAC$, and $\\overline{DC}$ bisects angle $BCA$. The measure of angle $ADC$ is [See figure in original PDF]",
-      "interaction": {
-        "type": "mcq",
-        "choices": [
-          "$90^{\\circ}$",
-          "$100^{\\circ}$",
-          "$115^{\\circ}$",
-          "$122.5^{\\circ}$",
-          "$125^{\\circ}$"
-        ],
-        "correctIndex": 2
-      },
-      "solutionMetadata": {
-        "kind": "none"
-      }
-    },
-    {
-      "uniqueId": "ajhsme-1997-12",
-      "name": "Problem 12 (1997 AJHSME)",
-      "url": "https://artofproblemsolving.com/wiki/index.php?title=1997_AJHSME_Problems/Problem_12",
-      "source": "AJHSME",
-      "difficulty": "Easy",
-      "isStarred": false,
-      "tags": [
-        "Angles",
-        "Geometry"
-      ],
-      "statement": "Given $\\angle 1 + \\angle 2 = 180^{\\circ}$ and $\\angle 3 = \\angle 4$. Find $\\angle 4$. [See figure in original PDF]",
-      "interaction": {
-        "type": "mcq",
-        "choices": [
-          "$20^{\\circ}$",
-          "$25^{\\circ}$",
-          "$30^{\\circ}$",
-          "$35^{\\circ}$",
-          "$40^{\\circ}$"
-        ],
-        "correctIndex": 3
-      },
-      "solutionMetadata": {
-        "kind": "none"
-      }
-    },
-    {
       "uniqueId": "amc8-2009-19",
       "name": "Problem 19 (2009 AMC 8)",
       "url": "https://artofproblemsolving.com/wiki/index.php?title=2009_AMC_8_Problems/Problem_19",

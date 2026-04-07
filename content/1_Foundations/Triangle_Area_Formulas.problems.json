@@ -82,34 +82,6 @@
       }
     },
     {
-      "uniqueId": "ajhsme-1993-18",
-      "name": "Problem 18 (1993 AJHSME)",
-      "url": "https://artofproblemsolving.com/wiki/index.php?title=1993_AJHSME_Problems/Problem_18",
-      "source": "AJHSME",
-      "difficulty": "Normal",
-      "isStarred": false,
-      "tags": [
-        "Subtraction of Areas",
-        "Quadrilaterals",
-        "Midpoints"
-      ],
-      "statement": "The rectangle shown has length $AC=32$, width $AE=20$, and $B$ and $F$ are midpoints of $\\overline{AC}$ and $\\overline{AE}$, respectively. The area of quadrilateral $ABDF$ is [See figure in original PDF]",
-      "interaction": {
-        "type": "mcq",
-        "choices": [
-          "$320$",
-          "$325$",
-          "$330$",
-          "$335$",
-          "$340$"
-        ],
-        "correctIndex": 0
-      },
-      "solutionMetadata": {
-        "kind": "none"
-      }
-    },
-    {
       "uniqueId": "amc8-1999-23",
       "name": "Problem 23 (1999 AMC 8)",
       "url": "https://artofproblemsolving.com/wiki/index.php?title=1999_AMC_8_Problems/Problem_23",

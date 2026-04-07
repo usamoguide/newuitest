@@ -107,60 +107,6 @@
       }
     },
     {
-      "uniqueId": "ajhsme-1991-10",
-      "name": "Problem 10 (1991 AJHSME)",
-      "url": "https://artofproblemsolving.com/wiki/index.php?title=1991_AJHSME_Problems/Problem_10",
-      "source": "AJHSME",
-      "difficulty": "Easy",
-      "isStarred": false,
-      "tags": [
-        "Area of Parallelogram",
-        "Coordinates"
-      ],
-      "statement": "The area in square units of the region enclosed by parallelogram $ABCD$ is [See figure in original PDF]",
-      "interaction": {
-        "type": "mcq",
-        "choices": [
-          "$6$",
-          "$8$",
-          "$12$",
-          "$15$",
-          "$18$"
-        ],
-        "correctIndex": 1
-      },
-      "solutionMetadata": {
-        "kind": "none"
-      }
-    },
-    {
-      "uniqueId": "ajhsme-1996-17",
-      "name": "Problem 17 (1996 AJHSME)",
-      "url": "https://artofproblemsolving.com/wiki/index.php?title=1996_AJHSME_Problems/Problem_17",
-      "source": "AJHSME",
-      "difficulty": "Easy",
-      "isStarred": false,
-      "tags": [
-        "Area of a Triangle",
-        "Square Area"
-      ],
-      "statement": "Figure $OPQR$ is a square. Point $O$ is the origin, and point $Q$ has coordinates $(2, 2)$. What are the coordinates for $T$ so that the area of triangle $PQT$ equals the area of square $OPQR$? [See figure in original PDF]",
-      "interaction": {
-        "type": "mcq",
-        "choices": [
-          "$(-6,0)$",
-          "$(-4,0)$",
-          "$(-2,0)$",
-          "$(2,0)$",
-          "$(4,0)$"
-        ],
-        "correctIndex": 2
-      },
-      "solutionMetadata": {
-        "kind": "none"
-      }
-    },
-    {
       "uniqueId": "amc8-2001-11",
       "name": "Problem 11 (2001 AMC 8)",
       "url": "https://artofproblemsolving.com/wiki/index.php?title=2001_AMC_8_Problems/Problem_11",

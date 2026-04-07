@@ -79,32 +79,6 @@
       }
     },
     {
-      "uniqueId": "ajhsme-1994-21",
-      "name": "Problem 21 (1994 AJHSME)",
-      "url": "https://artofproblemsolving.com/wiki/index.php?title=1994_AJHSME_Problems/Problem_21",
-      "source": "AJHSME",
-      "difficulty": "Easy",
-      "isStarred": false,
-      "tags": [
-        "Worst Case Scenario"
-      ],
-      "statement": "A gumball machine contains $9$ red, $7$ white, and $8$ blue gumballs. The least number of gumballs a person must buy to be sure of getting four gumballs of the same color is",
-      "interaction": {
-        "type": "mcq",
-        "choices": [
-          "$8$",
-          "$9$",
-          "$10$",
-          "$12$",
-          "$18$"
-        ],
-        "correctIndex": 2
-      },
-      "solutionMetadata": {
-        "kind": "none"
-      }
-    },
-    {
       "uniqueId": "amc8-2005-16",
       "name": "Problem 16 (2005 AMC 8)",
       "url": "https://artofproblemsolving.com/wiki/index.php?title=2005_AMC_8_Problems/Problem_16",
