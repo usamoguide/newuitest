@@ -89,7 +89,8 @@ const MODULE_ORDERING: { [key in SectionID]: Chapter[] } = {
         'law-of-sines',
         'law-of-cosines',
         'circle-angles',
-        'special-quadrilaterals'
+        'special-quadrilaterals',
+        'triangle-congruence-similarity',
       ],
     },
     {
