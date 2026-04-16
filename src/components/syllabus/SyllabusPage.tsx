@@ -184,11 +184,11 @@ export default function SyllabusPage({
                   to="/dashboard"
                   className="purple-motion-effect inline-block rounded-full px-7 py-3 text-sm font-bold transition-all duration-300"
                   style={{
-                    border: '1px solid rgba(112, 66, 138, 0.55)',
-                    backgroundColor: '#70428A',
-                    '--pme-color': '#F4EDEA',
+                    border: '1px solid rgba(240, 194, 255, 0.34)',
+                    background: 'var(--accent-gradient)',
+                    '--pme-color': '#201C36',
                     '--pme-hover-color': '#201C36',
-                    '--pme-wipe-bg': '#F7DEFF',
+                    '--pme-wipe-bg': '#F0C2FF',
                   } as React.CSSProperties}
                 >
                   Continue Learning {'>'}

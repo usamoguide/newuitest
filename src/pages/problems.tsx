@@ -177,9 +177,9 @@ export default function ProblemsPage(props: PageProps<DataProps>) {
                       onClick={() => sendShuffle(shuffle + 1)}
                       className="purple-motion-effect inline-flex items-center rounded-lg px-4 py-2 text-sm font-semibold shadow-lg transition duration-200 focus:outline-none"
                       style={{
-                        border: '1px solid rgba(112, 66, 138, 0.55)',
-                        backgroundColor: '#3F2D51',
-                        '--pme-color': VANILLA,
+                        border: '1px solid rgba(240, 194, 255, 0.34)',
+                        background: 'var(--accent-gradient)',
+                        '--pme-color': '#201C36',
                         '--pme-hover-color': '#201C36',
                         '--pme-wipe-bg': '#F0C2FF',
                       } as React.CSSProperties}

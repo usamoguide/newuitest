@@ -348,11 +348,11 @@ export default function DashboardPage(props: PageProps) {
                 <Link
                   className="purple-motion-effect inline-flex w-full items-center justify-center rounded-md px-5 py-3 text-base font-medium transition"
                   style={{
-                    border: '1px solid rgba(112, 66, 138, 0.55)',
-                    backgroundColor: '#70428A',
-                    '--pme-color': VANILLA,
+                    border: '1px solid rgba(240, 194, 255, 0.34)',
+                    background: 'var(--accent-gradient)',
+                    '--pme-color': '#201C36',
                     '--pme-hover-color': '#201C36',
-                    '--pme-wipe-bg': '#F7DEFF',
+                    '--pme-wipe-bg': '#F0C2FF',
                   } as React.CSSProperties}
                   to={
                     lastViewedModuleURL ||

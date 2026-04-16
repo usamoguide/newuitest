@@ -10,10 +10,10 @@ export default function BlindModeToggle() {
       aria-pressed={isBlindMode}
        className="purple-motion-effect inline-flex items-center rounded-lg px-4 py-2 text-sm font-semibold shadow-lg transition duration-200 focus:outline-none"
        style={{
-        border: '1px solid rgba(99, 84, 139, 0.55)',
-        background: 'linear-gradient(135deg, #5A2F87 0%, #C58BFF 100%)',
-        color: '#F4EDEA',
-        ['--pme-color' as string]: '#F4EDEA',
+        border: '1px solid rgba(240, 194, 255, 0.34)',
+        background: 'var(--accent-gradient)',
+        color: '#201C36',
+        ['--pme-color' as string]: '#201C36',
         ['--pme-hover-color' as string]: '#201C36',
         ['--pme-wipe-bg' as string]: '#F0C2FF',
 
