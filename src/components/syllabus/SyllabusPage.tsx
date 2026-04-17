@@ -182,22 +182,31 @@ export default function SyllabusPage({
               <div className="mb-8 flex flex-wrap items-center justify-center gap-4">
                 <Link
                   to="/dashboard"
-                  className="purple-motion-effect inline-block rounded-full px-7 py-3 text-sm font-bold transition-all duration-300"
+                  className="purple-motion-effect inline-flex items-center justify-center rounded-full px-6 py-3 md:px-8 md:py-3 font-mono text-lg font-bold leading-tight"
                   style={{
                     border: '1px solid rgba(240, 194, 255, 0.34)',
-                    background: 'var(--accent-gradient)',
-                    '--pme-color': '#201C36',
+                    background: 'linear-gradient(135deg, #5A2F87 0%, #C58BFF 100%)',
+                    boxShadow: 'none',
+                    '--pme-color': '#F4EDEA',
                     '--pme-hover-color': '#201C36',
                     '--pme-wipe-bg': '#F0C2FF',
                   } as React.CSSProperties}
                 >
-                  Continue Learning {'>'}
+                  Continue Learning &gt;
                 </Link>
                 <a
                   href="https://discord.gg/X2zx6u53XH"
                   target="_blank"
                   rel="noreferrer"
-                  className="inline-block rounded-full border border-[#F0C2FF55] bg-[#171228]/72 px-7 py-3 text-sm font-bold text-[#F0C2FF] transition"
+                  className="purple-motion-effect inline-flex items-center justify-center rounded-full px-6 py-3 md:px-8 md:py-3 font-mono text-lg font-bold leading-tight"
+                  style={{
+                    border: '1px solid rgba(240, 194, 255, 0.34)',
+                    background: 'linear-gradient(135deg, #FFF8FF 0%, #F3E7FF 38%, #D7B2FF 100%)',
+                    boxShadow: 'none',
+                    '--pme-color': '#2C1842',
+                    '--pme-hover-color': '#201C36',
+                    '--pme-wipe-bg': '#F0C2FF',
+                  } as React.CSSProperties}
                 >
                   Join Community
                 </a>
